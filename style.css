@@ -1,7 +1,7 @@
 body{
     display:grid;
     grid-template-columns: 1fr 11.3fr 1fr;
-    background-image:url("https://www.chromethemer.com/download/hd-wallpapers/blue-space-3840x2160.jpg") ;
+    background-image:url("https://github.com/PPSCTutoring/PPSCTutoring.github.io/blob/main/image.png") ;
     background-size: cover;
     background-repeat: no-repeat;
 }
