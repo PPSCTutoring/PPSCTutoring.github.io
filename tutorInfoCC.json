@@ -1,0 +1,169 @@
+{
+   "location": "Centennial Campus",
+   "tutors":{
+        "Ben":{
+            "name":"Ben",
+            "subjects":[
+                "Math",
+                "Physics",
+                "Chemistry"
+            ],
+            "time":{
+                "Monday":[[9,17]],
+                "Wednesday":[[10,17]],
+                "Thursday":[[9,17]],
+                "Friday":[[9,14]]
+            },
+            "called_off": false,
+            "override": false
+        },
+        "Oscar":{
+            "name":"Oscar",
+            "subjects":[
+                "Math",
+                "Computer Science"
+            ],
+            "time":{
+                "Monday":[[14.5, 17]],
+                "Tuesday":[[9,17]],
+                "Wednesday":[[9,17]],
+                "Thursday":[[12.5,17]],
+                "Saturday":[[0,23]]
+            },
+            "called_off": false,
+            "override": false
+        },
+        "Kiela":{
+            "name": "Kiela",
+            "subjects":[
+                "Biology",
+                "Math",
+                "Chemistry"               
+            ],
+            "time":{
+                "Wednesday":[[9,17]]
+            },
+            "called_off": false,
+            "override": false
+        },
+        "Neal":{
+            "name":"Neal",
+            "subjects":[
+                "Writing",
+                "Chemistry"
+            ],
+            "time":{
+                "Monday":[[9,17]],
+                "Tuesday":[[9,17]],
+                "Wednesday":[[9,17]]
+            },
+            "called_off": false,
+            "override": false
+        },
+        "Melisa":{
+            "name":"Melisa",
+            "subjects":[
+                "Math",
+                "Writing"
+            ],
+            "time":{
+                "Monday":[[9,15.5]],
+                "Wednesday":[[9,15.5]]
+
+            },
+            "called_off": false
+        },
+        "Matthew":{
+            "name":"Matthew",
+            "subjects":[
+                "Math"
+            ],
+            "time":{
+                "Tuesday":[[11,12],[14,17]],
+                "Wednesday":[[11,12],[14,17]],
+                "Thursday":[[11,12],[14,17]]
+            },
+            "called_off": false
+        },
+        "Chris":{
+            "name":"Chris",
+            "subjects":[
+                "Math"
+            ],
+            "time":{
+                "Monday":[[10.5,17]],
+                "Tuesday":[[10.5,17]],
+                "Wednesday":[[10.5,17]],
+                "Thursday":[[10.5,17]]
+            },
+            "called_off": false
+        },
+        "Owen":{
+            "name":"Owen",
+            "subjects":[
+                "Accounting",
+                "Business",
+                "Writing"
+            ],
+            "time":{
+                "Tuesday":[[9, 17]],
+                "Wednesday":[[9,17]],
+                "Thursday":[[9,17]]
+            },
+            "called_off": false
+        },
+        "Dee":{
+            "name":"Dee",
+            "subjects":[
+                "Zoo"
+            ],
+            "time":{
+                "Wednesday":[[9,15]],
+                "Thursday":[[9,15]]
+            },
+            "called_off": false
+        },
+        "Lexy":{
+            "name":"Lexy",
+            "subjects":[
+                "Biology"
+            ],
+            "time":{
+                "Tuesday":[[9,17]],
+                "Wednesday":[[10,15]],
+                "Thursday":[[9,17]],
+                "Friday":[[9,14]]
+            },
+            "called_off": false
+        },
+        "Vanessa":{
+            "name":"Vanessa",
+            "subjects":[
+                "Accounting",
+                "Business",
+                "Writing"
+            ],
+            "time":{
+                "Monday":[[9,16]],
+                "Tuesday":[[9,16]],
+                "Wednesday":[[9,16]],
+                "Thursday":[[9,16]]
+            },
+            "called_off": false
+        },
+        "Mykel":{
+            "name":"Mykel",
+            "subjects":[
+                "Math"
+            ],
+            "time":{
+                "Monday":[[9,16]],
+                "Tuesday":[[9,16]],
+                "Wednesday":[[9,16]],
+                "Thursday":[[9,16]]
+            },
+            "called_off": false
+        }
+        
+   }
+}

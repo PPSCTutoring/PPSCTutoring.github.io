@@ -1,0 +1,133 @@
+body{
+    display:grid;
+    grid-template-columns: 1fr 11.3fr 1fr;
+    background-image:url("https://www.chromethemer.com/download/hd-wallpapers/blue-space-3840x2160.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#override-button{
+    display: inline-block;
+    position: relative;
+    font-size:30px;
+    background-color: cornflowerblue;
+    padding: 20% 20%;
+    z-index: 0;
+}
+
+.dropdown-content{
+    display: none;
+    font-size: 200%;
+    position: absolute;
+    background: #42cbf5;
+    max-height: fit-content;
+    border-radius: 10px;
+    margin-top: 0.5%;
+    grid-column: 1 / 2;
+    padding-right: 10px;
+    z-index: 1;
+    color:white;
+    cursor: pointer;
+    max-width: fit-content;
+    list-style-type: none;
+    box-shadow: 22px 10px 6px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 22px 10px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 10px 6px 0px rgba(0,0,0,0.75);
+}
+
+
+.dropdown-content li{
+    border-radius: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.dropdown-content li:nth-child(1){
+    margin-top: 5px;
+}
+
+.dropdown-content li:nth-last-child(1){
+    margin-bottom: 5px;
+}
+
+.dropdown-content li:hover{
+    background-color: #f2cbf5;
+    display: block;
+}
+
+
+#tutoring-center{
+    font-family: Arial;
+    color: white;
+    font-size: 6vh;
+    padding:0%;
+    text-align:center;
+    margin:auto;
+    margin-bottom: .5%;
+    margin-top: 2%;
+}
+
+
+.main-lists{
+    font-family: sans-serif;
+}
+
+#day-of-the-week{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-bottom: white solid;
+    border-bottom-width: 30px;
+    margin:auto;
+    padding-top: 1%;
+    padding-bottom:1%;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+}
+
+
+#tutor-list{
+    color: white;
+    background-color:#0c4a66;
+    font-family: Helvetica;
+    list-style-type: none;
+    font-size: 3vh;
+    margin: auto;
+    padding:0%;
+    text-align: left;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+}
+
+#tutor-list li{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding-left: 15%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+
+}
+
+#tutor-list p{
+    margin:0;
+    padding:0;
+}
+
+#tutor-list li:nth-child(even){
+    background: #155e83;
+    
+}
+
+#tutor-list span{
+    font-size: 6vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#tutor-list li:nth-last-child(1){
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+}
