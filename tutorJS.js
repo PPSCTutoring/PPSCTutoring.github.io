@@ -117,18 +117,28 @@ function dailySchedule(tutors){
     cover: tutor object - may get rid of
 */
 
-function createTimes(schedule, tutors, calledOff, cover){
+function updateSmartBoard(schedule, tutors, calledOff, cover){
     // init
+    let amOrPm;
     let currentTime = new Date();
     const dayNames = ["Sunday", "Monday", "Tuesday",
         "Wednesday", "Thursday", "Friday", "Saturday"
     ];
 
-    let amOrPm = (currentTime.getHours() > 12) ? " PM" : " AM";
+    
     let minutesPretty = (currentTime.getMinutes() < 10)? "0"+currentTime.getMinutes() : currentTime.getMinutes();
     let dayOfWeek = dayNames[currentTime.getDay()];
     let timeNow = parseFloat((currentTime.getHours() + (currentTime.getMinutes() / 60.0)).toFixed(2));
     let dailyTutors = schedule[dayOfWeek];
+
+    if(currentTime.getHours() != 12){
+        let amOrPm = (currentTime.getHours() > 12) ? " PM" : " AM";
+        dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    " + currentTime.getHours() % 12 + ":" + minutesPretty + amOrPm;
+    }
+    else{
+        let amOrPm = (currentTime.getHours() == 12) ? " PM": " AM";
+        dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    12:" + minutesPretty + amOrPm;
+    }
     
     // remove call offs
     // could probably use a while loop here
@@ -139,7 +149,7 @@ function createTimes(schedule, tutors, calledOff, cover){
     //     }
     // }
 
-    dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    " + currentTime.getHours() % 12 + ":" + minutesPretty + amOrPm;
+    
 
     // add to list if fucking working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
@@ -207,7 +217,7 @@ async function main(){
 
 
     setInterval(() =>{
-        createTimes(schedule, tutors, calledOff, cover);
+        updateSmartBoard(schedule, tutors, calledOff, cover);
         // date = new Date();
         // let currentTime = parseFloat((date.getHours() + (date.getMinutes() / 60.0)).toFixed(2));
         // console.log(currentTime);
@@ -218,6 +228,7 @@ async function main(){
     // when the list is clicked determine which tutor was clicked
     // this will be use for the overrides/cover 
     // the technical debt accumulates...
+    // I think this is stupid: Use buttons for the hiddenlist lol
     hiddenTutListHTML.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI'){
         let nombre = event.target.textContent;
