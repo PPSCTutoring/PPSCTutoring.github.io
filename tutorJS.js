@@ -30,8 +30,7 @@ function createHiddenLists(tutors){
     }
 }
 
-// param: Array
-// TODO: prettify an array of Subjects
+// param: String array
 function prettify(arr){
     let ret = '';
 

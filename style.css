@@ -70,6 +70,7 @@ body{
 
 .main-lists{
     font-family: sans-serif;
+    padding-top: 4%;
 }
 
 #day-of-the-week{
@@ -80,7 +81,7 @@ body{
     margin-top: 0%;
     margin-bottom: 0%;
     border-bottom: white solid;
-    border-bottom-width: 30px;
+    border-bottom-width: 10px;
     margin:auto;
     padding-top: 1%;
     padding-bottom:1%;
@@ -94,7 +95,7 @@ body{
     background-color:#0c4a66;
     font-family: Helvetica;
     list-style-type: none;
-    font-size: 3vh;
+    font-size: 2.3vw;
     margin: auto;
     padding:0%;
     text-align: left;
@@ -108,17 +109,15 @@ body{
     padding-left: 15%;
     padding-top: .5%;
     padding-bottom: .5%;
-
 }
 
 #tutor-list p{
     margin:0;
-    padding:0;
+    padding-top: 4%;
 }
 
 #tutor-list li:nth-child(even){
     background: #155e83;
-    
 }
 
 #tutor-list span{
