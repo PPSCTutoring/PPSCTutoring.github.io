@@ -27,8 +27,7 @@
                 "Monday":[[14.5, 17]],
                 "Tuesday":[[9,17]],
                 "Wednesday":[[9,17]],
-                "Thursday":[[12.5,17]],
-                "Saturday":[[0,23]]
+                "Thursday":[[12.5,17]]
             },
             "called_off": false,
             "override": false

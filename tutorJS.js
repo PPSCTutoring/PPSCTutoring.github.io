@@ -34,17 +34,21 @@ function createHiddenLists(tutors){
 // TODO: prettify an array of Subjects
 function prettify(arr){
     let ret = '';
-    if(arr.length > 1){
+
+    if(arr.length == 1){
+        return arr;
+    }
+    else if(arr.length == 2){
+        ret = arr[0] + " and " + arr[1];
+    }
+    else{
         for(var i = 0; i < arr.length-1; i++){
             ret += arr[i] + ", ";
         }
         ret += " and "
         ret += arr[i++];
+    }
     return ret;
-    }
-    else{
-        return arr;
-    }
 }
 
 /*
@@ -125,7 +129,6 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
         "Wednesday", "Thursday", "Friday", "Saturday"
     ];
 
-    
     let minutesPretty = (currentTime.getMinutes() < 10)? "0"+currentTime.getMinutes() : currentTime.getMinutes();
     let dayOfWeek = dayNames[currentTime.getDay()];
     let timeNow = parseFloat((currentTime.getHours() + (currentTime.getMinutes() / 60.0)).toFixed(2));
@@ -136,6 +139,7 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
         dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    " + currentTime.getHours() % 12 + ":" + minutesPretty + amOrPm;
     }
     else{
+        // This makes 12am show as 0:00 am but idc because this will only be during 9-5lol
         let amOrPm = (currentTime.getHours() == 12) ? " PM": " AM";
         dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    12:" + minutesPretty + amOrPm;
     }
@@ -151,7 +155,7 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
 
     
 
-    // add to list if fucking working and take off if not working
+    // add to list if working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
 
         let name = dailyTutors[t]; // string
@@ -163,8 +167,7 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
             start = timeframe[i][0];
             end = timeframe[i][1];
 
-            // very spaghetti
-            if((start < timeNow)&&(timeNow < end)){
+            if((start <= timeNow)&&(timeNow <= end)){
                 isWorking = true;
                 break;
             }
@@ -213,7 +216,9 @@ async function main(){
     */
     hiddenTutListHTML.style.display = "none"
 
-    dotwHTML.innerHTML = "<b>" + "INITALIZING" + "</b>";
+
+
+    dotwHTML.innerHTML = "<b>" + "INITALIZING " + "</b>" + screen.availWidth + "x" + screen.availHeight;
 
 
     setInterval(() =>{
@@ -222,8 +227,6 @@ async function main(){
         // let currentTime = parseFloat((date.getHours() + (date.getMinutes() / 60.0)).toFixed(2));
         // console.log(currentTime);
     }, timeRepeat);
-
-
 
     // when the list is clicked determine which tutor was clicked
     // this will be use for the overrides/cover 
