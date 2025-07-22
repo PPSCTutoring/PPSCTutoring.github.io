@@ -98,8 +98,8 @@ body{
     margin: auto;
     padding:0%;
     text-align: left;
-    border-bottom-left-radius: 175px;
-    border-bottom-right-radius: 175px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
 }
 
 #tutor-list li{
@@ -128,6 +128,6 @@ body{
 }
 
 #tutor-list li:nth-last-child(1){
-    border-bottom-left-radius: 175px;
-    border-bottom-right-radius: 175px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
 }
