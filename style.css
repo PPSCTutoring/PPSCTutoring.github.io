@@ -70,7 +70,6 @@ body{
 
 .main-lists{
     font-family: sans-serif;
-    padding-top: 4%;
 }
 
 #day-of-the-week{
@@ -121,7 +120,7 @@ body{
 }
 
 #tutor-list span{
-    font-size: 6vh;
+    font-size: 5vh;
     padding-left: 5%;
     padding-right: 5%;
 }
