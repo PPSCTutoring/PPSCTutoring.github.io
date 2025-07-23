@@ -64,13 +64,17 @@ function addToPublicList(nombre, subs){
     // I'm using an array to check if the Tutor is in the list
     // add tutor to the list and make them visible 
     let ulAddName = document.createElement('li');
-    ulAddName.innerHTML = "<p><span>" + nombre + "</span></p>"+ "<p>"+ subs + "</p>";
+    let tutImg = document.createElement('img');
+    tutImg.src = "tut_icons/"+nombre+".png";
+    tutImg.width = "90"
+    ulAddName.appendChild(tutImg)
+    ulAddName.innerHTML += "<p><span>" + nombre + "</span></p>"+ "<p>"+ subs + "</p>";
     ulAddName.id = nombre;
     presentListHTML.appendChild(ulAddName);
     presentTutors.push(nombre);
     ulAddName.style.visibility = 'visible';
     if (presentTutors.length > 7){
-
+        
     }
 }
 
