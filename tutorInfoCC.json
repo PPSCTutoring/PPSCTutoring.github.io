@@ -70,7 +70,8 @@
                 "Wednesday":[[9,15.5]]
 
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Matthew":{
             "name":"Matthew",
@@ -95,7 +96,8 @@
                 "Wednesday":[[10.5,17]],
                 "Thursday":[[10.5,17]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Owen":{
             "name":"Owen",
@@ -109,7 +111,8 @@
                 "Wednesday":[[9,17]],
                 "Thursday":[[9,17]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Dee":{
             "name":"Dee",
@@ -120,7 +123,8 @@
                 "Wednesday":[[9,15]],
                 "Thursday":[[9,15]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Lexy":{
             "name":"Lexy",
@@ -133,7 +137,8 @@
                 "Thursday":[[9,17]],
                 "Friday":[[9,14]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Vanessa":{
             "name":"Vanessa",
@@ -148,7 +153,8 @@
                 "Wednesday":[[9,16]],
                 "Thursday":[[9,16]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         },
         "Mykel":{
             "name":"Mykel",
@@ -161,7 +167,8 @@
                 "Wednesday":[[9,16]],
                 "Thursday":[[9,16]]
             },
-            "called_off": false
+            "called_off": false,
+            "override": false
         }
         
    }

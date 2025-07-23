@@ -105,13 +105,13 @@ body{
 #tutor-list li{
     display: grid;
     grid-template-columns: .5fr 1.5fr 5fr;
-    padding-left: 15%;
+    padding-left: 10%;
 
 }
 
 #tutor-list p{
     margin:0;
-    padding-top: 4%;
+    padding-top: 2.5%;
 }
 
 #tutor-list li:nth-child(even){
@@ -119,10 +119,11 @@ body{
 }
 
 #tutor-list span{
+    display: inline-block;
     font-size: 5.4vh;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: .5%;
+    padding-top: 7%;
 }
 
 #tutor-list li:nth-last-child(1){
