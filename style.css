@@ -106,8 +106,7 @@ body{
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     padding-left: 15%;
-    padding-top: .5%;
-    padding-bottom: .5%;
+
 }
 
 #tutor-list p{
@@ -120,9 +119,10 @@ body{
 }
 
 #tutor-list span{
-    font-size: 5vh;
+    font-size: 6vh;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: .5%;
 }
 
 #tutor-list li:nth-last-child(1){
