@@ -38,13 +38,12 @@ function prettify(arr){
         return arr;
     }
     else if(arr.length == 2){
-        ret = arr[0] + " and " + arr[1];
+        ret = arr[0] + " • " + arr[1];
     }
     else{
         for(var i = 0; i < arr.length-1; i++){
-            ret += arr[i] + ", ";
+            ret += arr[i] + " • ";
         }
-        ret += " and "
         ret += arr[i++];
     }
     return ret;
