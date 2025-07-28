@@ -169,7 +169,7 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
             start = timeframe[i][0];
             end = timeframe[i][1];
 
-            if((start <= timeNow)&&(timeNow <= end)){
+            if((start <= timeNow)&&(timeNow < end)){
                 isWorking = true;
                 break;
             }
