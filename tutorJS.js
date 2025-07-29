@@ -218,10 +218,22 @@ async function main(){
     */
     hiddenTutListHTML.style.display = "none"
 
+    const wakeUP = async() => {
+        try{
+            await navigator.wakeLock.request("screen");
+            console.log("Wake lock active");
+        }
+        catch(err){
+            console.log("Wake up didnt work: ");
+            console.log(err);
+        }
+    };
+
 
 
     dotwHTML.innerHTML = "<b>" + "INITALIZING " + "</b>" + screen.availWidth + "x" + screen.availHeight;
 
+    wakeUP();
 
     setInterval(() =>{
         updateSmartBoard(schedule, tutors, calledOff, cover);
