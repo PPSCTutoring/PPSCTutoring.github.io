@@ -145,17 +145,6 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
         let amOrPm = (currentTime.getHours() == 12) ? " PM": " AM";
         dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    12:" + minutesPretty + amOrPm;
     }
-    
-    // remove call offs
-    // could probably use a while loop here
-    // TODO: just have call offs and covers fix "tutors" somewhere else
-    // if(calledOff.length != 0){
-    //     for(let i = 0; i < calledOff.length; i++){
-    //         dailyTutors.splice(calledOff[i]);
-    //     }
-    // }
-
-    
 
     // add to list if working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
