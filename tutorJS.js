@@ -19,9 +19,9 @@ var screenSize = screen.availHeight;
 const imageSizeDivider = 12;
 const imageSizeDividerSmall = 13;
 
-var borderRadius = "90px";
 var imgSize = screenSize / imageSizeDivider;
-var imgSizeSmall = screenSize / imageSizeDividerSmall;
+var borderRadius = "90px";
+
 
 // Functions
 
@@ -109,7 +109,9 @@ a calculation of how many people are here and the size of the screen
 this works for now :)
 */
 function fixDisplaySizing(){
+    var screenSize = screen.availHeight;
     if (tutorsCurrPresent.length >= 10){
+        var imgSizeSmall = screenSize / imageSizeDividerSmall;
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSizeSmall
@@ -119,6 +121,7 @@ function fixDisplaySizing(){
         presentListHTML.style.borderRadius = borderRadius;
     }
     else{
+        var imgSize = screenSize / imageSizeDivider;
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSize
@@ -275,6 +278,7 @@ async function main(){
         updateSmartBoard(schedule, tutors);
     }, timeRepeat);
 
+
     // I think this is stupid: Use buttons for the hiddenlist lol
     // Function that handles the hidden list: 
     // TODO:
@@ -338,4 +342,5 @@ async function main(){
 
 }
 
+window.onresize = fixDisplaySizing;
 main();
