@@ -11,7 +11,7 @@ var tutorsCurrPresent = [];
 var dotwHTML = document.getElementById("day-of-the-week");
 var spanNames = document.getElementsByTagName("span");
 var overrideButton = document.getElementById("override-button");
-var dayOfTheWeek = document.getElementById("day-of-the-week");
+var tutoringCenterHTML = document.getElementById("tutoring-center");
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 // Display Settings
@@ -264,7 +264,10 @@ async function main(){
             await navigator.wakeLock.request("screen");
         }
         catch(err){
-            alert("Wake Lock did not work please reload the page");
+            wakeLockOff = document.createElement("p");
+            wakeLockOff.textContent = "WAKE LOCK OFF: RELOAD TO ACTIVATE!!!";
+            wakeLockOff.color = "red";
+            tutoringCenterHTML.appendChild(wakeLockOff);
             console.log("Wake lock did not work: ");
             console.log(err);
         }
