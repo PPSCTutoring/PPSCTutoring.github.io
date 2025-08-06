@@ -15,9 +15,13 @@ var dayOfTheWeek = document.getElementById("day-of-the-week");
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 // Display Settings
+var screenSize = screen.availHeight;
+const imageSizeDivider = 12;
+const imageSizeDividerSmall = 13;
+
 var borderRadius = "90px";
-var imgSize = 90;
-var imgSizeSmall = 85;
+var imgSize = screenSize / imageSizeDivider;
+var imgSizeSmall = screenSize / imageSizeDividerSmall;
 
 // Functions
 
@@ -257,6 +261,7 @@ async function main(){
             await navigator.wakeLock.request("screen");
         }
         catch(err){
+            alert("Wake Lock did not work please reload the page");
             console.log("Wake lock did not work: ");
             console.log(err);
         }
@@ -274,6 +279,7 @@ async function main(){
     // Function that handles the hidden list: 
     // TODO:
     // Causes an error if they left and stayed "on red" after hours.
+    // Do this somewhere else I hate the fact I'm changing background color here
     hiddenTutListHTML.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI'){
         let date = new Date(); 
