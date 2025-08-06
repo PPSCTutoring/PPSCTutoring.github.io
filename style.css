@@ -1,7 +1,7 @@
 body{
     display:grid;
     grid-template-columns: 1fr 11.3fr 1fr;
-    background-image:url("https://github.com/PPSCTutoring/PPSCTutoring.github.io/blob/main/bgimage.png?raw=true") ;
+    background-image:url("bgimage.png") ;
     background-size: cover;
     background-repeat: no-repeat;
 }

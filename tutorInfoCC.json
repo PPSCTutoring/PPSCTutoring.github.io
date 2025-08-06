@@ -9,13 +9,14 @@
                 "Chemistry"
             ],
             "time":{
-                "Monday":[[9,17]],
+                "Monday":[[9,14]],
                 "Wednesday":[[10,17]],
                 "Thursday":[[9,17]],
                 "Friday":[[9,14]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Oscar":{
             "name":"Oscar",
@@ -29,8 +30,9 @@
                 "Wednesday":[[9,17]],
                 "Thursday":[[12.5,17]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Kiela":{
             "name": "Kiela",
@@ -42,8 +44,9 @@
             "time":{
                 "Wednesday":[[9,16]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Neal":{
             "name":"Neal",
@@ -56,8 +59,9 @@
                 "Tuesday":[[9,17]],
                 "Wednesday":[[9,17]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Melisa":{
             "name":"Melisa",
@@ -70,8 +74,9 @@
                 "Wednesday":[[9,15.5]]
 
             },
+            "to_be_working": false, 
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Matthew":{
             "name":"Matthew",
@@ -83,7 +88,9 @@
                 "Wednesday":[[11,12],[14,17]],
                 "Thursday":[[11,12],[14,17]]
             },
-            "called_off": false
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
         },
         "Chris":{
             "name":"Chris",
@@ -96,8 +103,9 @@
                 "Wednesday":[[10.5,17]],
                 "Thursday":[[10.5,17]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Owen":{
             "name":"Owen",
@@ -111,8 +119,9 @@
                 "Wednesday":[[9,17]],
                 "Thursday":[[9,17]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Dee":{
             "name":"Dee",
@@ -123,8 +132,9 @@
                 "Wednesday":[[9,15]],
                 "Thursday":[[9,15]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Lexy":{
             "name":"Lexy",
@@ -137,8 +147,9 @@
                 "Thursday":[[9,17]],
                 "Friday":[[9,14]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Vanessa":{
             "name":"Vanessa",
@@ -153,8 +164,9 @@
                 "Wednesday":[[9,16]],
                 "Thursday":[[9,16]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         },
         "Mykel":{
             "name":"Mykel",
@@ -167,8 +179,9 @@
                 "Wednesday":[[9,16]],
                 "Thursday":[[9,16]]
             },
+            "to_be_working": false,
             "called_off": false,
-            "override": false
+            "has_extra_time": false
         }
         
    }

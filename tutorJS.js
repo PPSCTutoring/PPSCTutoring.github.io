@@ -2,26 +2,34 @@
     For any questions on design code txt me on Teams!!!
 */
 
-// Definitions !!!!!
+// Global Variables
 
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
 var body = document.getElementById("body");
-var presentTutors = [];
+var tutorsCurrPresent = [];
 var dotwHTML = document.getElementById("day-of-the-week");
 var spanNames = document.getElementsByTagName("span");
 var overrideButton = document.getElementById("override-button");
+var dayOfTheWeek = document.getElementById("day-of-the-week");
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// Functions !!
+// Display Settings
+var borderRadius = "90px";
+var imgSize = 90;
+var imgSizeSmall = 85;
 
-// TODO: 
+// Functions
+
 // All the tutors in the certain campus that will be toggable
 // Parameters: object of all the different tutors
+// Adds an id to the html
 function createHiddenLists(tutors){
     try{
         for(let i = 0; i < tutors.length; i++){
             let ulElement = document.createElement('li');
             ulElement.textContent = tutors[i];
+            ulElement.id = tutors[i]+"-hidden";
             hiddenTutListHTML.appendChild(ulElement);
         }
     }
@@ -34,7 +42,7 @@ function createHiddenLists(tutors){
 function prettify(arr){
     let ret = '';
 
-    if(arr.length == 1){
+    if((arr.length == 1)||(arr.length == 0)){
         return arr;
     }
     else if(arr.length == 2){
@@ -49,41 +57,71 @@ function prettify(arr){
     return ret;
 }
 
-/*
-list of tutors that are shown to public
-params: 
-    nombre:String
-    subs: Array
-*/
+
 function addToPublicList(nombre, subs){
-    console.log("Adding:", nombre);
-    subs = prettify(subs); 
-    let ulPresent = document.getElementById(nombre);
-    // o(n) time signature: use dictionaries to get O(1)
-    // I'm using an array to check if the Tutor is in the list
-    // add tutor to the list and make them visible 
-    let ulAddName = document.createElement('li');
-    let tutImg = document.createElement('img');
-    tutImg.src = "tut_icons/"+nombre+".png";
-    tutImg.width = "90"
-    ulAddName.appendChild(tutImg)
-    ulAddName.innerHTML += "<p><span>" + nombre + "</span></p>"+ "<p>"+ subs + "</p>";
-    ulAddName.id = nombre;
-    presentListHTML.appendChild(ulAddName);
-    presentTutors.push(nombre);
-    ulAddName.style.visibility = 'visible';
-    if (presentTutors.length > 7){
-        
+    try{
+        subs = prettify(subs); 
+        let ulAddName = document.createElement('li');
+        let tutImg = document.createElement('img');
+        tutImg.src = "tut_icons/"+nombre+".png";
+        tutImg.width = imgSize;
+        tutImg.id = nombre+"-img";
+        ulAddName.appendChild(tutImg);
+        ulAddName.innerHTML += "<p><span>" + nombre + "</span></p>"+ "<p>"+ subs + "</p>";
+        ulAddName.id = nombre;
+        presentListHTML.appendChild(ulAddName); 
+        tutorsCurrPresent.push(nombre);
+        ulAddName.style.visibility = 'visible';
+        fixDisplaySizing();
     }
+    catch(err){
+        console.log("Failed to add " + nombre, err);
+    }
+
 }
 
 function removeFromPublicList(nombre){
-    // remove from HTML
-    let ulPresent = document.getElementById(nombre);
-    presentListHTML.removeChild(ulPresent);
-    // remove from presentTutors list
-    let remTutor = presentTutors.indexOf(nombre);
-    presentTutors.splice(remTutor, 1);
+    try{
+        // remove from HTML
+        let ulPresent = document.getElementById(nombre);
+        presentListHTML.removeChild(ulPresent);
+        // remove from presentTutors list
+        let remTutor = tutorsCurrPresent.indexOf(nombre);
+        tutorsCurrPresent.splice(remTutor, 1);
+        fixDisplaySizing();
+    }
+    catch(err){
+        console.log("Failed adding " + nombre, err);
+    }
+}
+
+
+/* 
+Change font sizes depending on how many people are here
+TODO:
+Seems like 12 people will be working max so for now I'm allowed some laziness
+Would like to eventually calculate screen size and then make font size
+a calculation of how many people are here and the size of the screen
+this works for now :)
+*/
+function fixDisplaySizing(){
+    if (tutorsCurrPresent.length >= 10){
+        for(let i = 0; i < tutorsCurrPresent.length; i++){
+            let image = document.getElementById(tutorsCurrPresent[i]+"-img");
+            image.width = imgSizeSmall
+
+        }
+        dotwHTML.style.display = "none";
+        presentListHTML.style.borderRadius = borderRadius;
+    }
+    else{
+        for(let i = 0; i < tutorsCurrPresent.length; i++){
+            let image = document.getElementById(tutorsCurrPresent[i]+"-img");
+            image.width = imgSize
+        }
+        dotwHTML.style.display = "block";
+        presentListHTML.style.borderRadius = "";
+    }
 }
 
 // create an object of the different days with the tutors who work that day
@@ -122,14 +160,15 @@ function dailySchedule(tutors){
     calledOff: tutor object - may get rid of
     cover: tutor object - may get rid of
 */
-
-function updateSmartBoard(schedule, tutors, calledOff, cover){
+// TODO:
+// I dont like this, i'm doing way to much here, should add a function that
+// does the work of the logic for the timeframing on who should be on the board
+function updateSmartBoard(schedule, tutors){
     // init
+    let startOfWork = 9;
+    let endOfWork = 17;
     let amOrPm;
     let currentTime = new Date();
-    const dayNames = ["Sunday", "Monday", "Tuesday",
-        "Wednesday", "Thursday", "Friday", "Saturday"
-    ];
 
     let minutesPretty = (currentTime.getMinutes() < 10)? "0"+currentTime.getMinutes() : currentTime.getMinutes();
     let dayOfWeek = dayNames[currentTime.getDay()];
@@ -137,20 +176,19 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
     let dailyTutors = schedule[dayOfWeek];
 
     if(currentTime.getHours() != 12){
-        let amOrPm = (currentTime.getHours() > 12) ? " PM" : " AM";
+        amOrPm = (currentTime.getHours() > 12) ? " PM" : " AM";
         dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    " + currentTime.getHours() % 12 + ":" + minutesPretty + amOrPm;
     }
     else{
-        // This makes 12am show as 0:00 am but idc because this will only be during 9-5lol
-        let amOrPm = (currentTime.getHours() == 12) ? " PM": " AM";
+        amOrPm = (currentTime.getHours() == 12) ? " PM": " AM";
         dotwHTML.innerHTML = "<b>" + dayOfWeek + "</b>    12:" + minutesPretty + amOrPm;
     }
 
     // add to list if working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
 
-        let name = dailyTutors[t]; // string
-        let tutor = tutors[name];
+        let nombre = dailyTutors[t]; // string
+        let tutor = tutors[nombre];
         let subjects = tutor.subjects; // Array
         let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
         let isWorking = false; // Bool
@@ -159,25 +197,40 @@ function updateSmartBoard(schedule, tutors, calledOff, cover){
             end = timeframe[i][1];
 
             if((start <= timeNow)&&(timeNow < end)){
-                isWorking = true;
+                tutor.to_be_working = true;
+                break;
+            }
+            else{
+                tutor.to_be_working = false;
                 break;
             }
         }
         // TODO: work out the logic of this conditional a bit better
-        if(isWorking && !tutor.calledOff){
-            if(!presentTutors.includes(name)){
-                addToPublicList(name, subjects);
+        if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
+            if(!tutorsCurrPresent.includes(nombre)){
+                addToPublicList(nombre, subjects);
             }
         }
         else{
-            if(presentTutors.includes(name)){
-                removeFromPublicList(name);
+            if(tutorsCurrPresent.includes(nombre)){
+                removeFromPublicList(nombre);
             }
         }
-
-
     }
 
+    // when not working/ day has ended
+    // reinititalize everyone
+    // TODO: 
+    // This only grabs people there that day.... uhhh im stupid...
+    // I should grab everyones data on this list
+    if((timeNow < startOfWork)||(timeNow >= endOfWork)){
+        for(let t = 0; t < dailyTutors.length; t++){
+            let nombre = dailyTutors[t]; // string
+            let tutor = tutors[nombre];
+            tutor.calledOff = false;
+            tutor.has_extra_time = false;
+        }
+    }
 }
 
 async function fetchUsers(){
@@ -186,21 +239,13 @@ async function fetchUsers(){
 }
 
 async function main(){
-    /*
-        Initialization
-    */
-
     // get info from JSON
     const tutCenterInfo = await fetchUsers();
-    const tutors = tutCenterInfo['tutors'];
+    var tutors = tutCenterInfo['tutors'];
     createHiddenLists(Object.keys(tutors));
     let schedule = dailySchedule(tutors);
     let timeRepeat = 1000
-    // create some function later
-    let calledOff = [];
-    let cover = [];
-    let date = new Date();
-    console.log(schedule);
+
     /*
     For some stupid ass reason this makes the button press work because for some fucking
     stupid ass reason the style display is empty EVEN THOUGH I DEFINED IT AS NONE IN THE CSS
@@ -210,43 +255,69 @@ async function main(){
     const wakeUP = async() => {
         try{
             await navigator.wakeLock.request("screen");
-            console.log("Wake lock active");
         }
         catch(err){
-            console.log("Wake up didnt work: ");
+            console.log("Wake lock did not work: ");
             console.log(err);
         }
     };
-
-
 
     dotwHTML.innerHTML = "<b>" + "INITALIZING " + "</b>" + screen.availWidth + "x" + screen.availHeight;
 
     wakeUP();
 
     setInterval(() =>{
-        updateSmartBoard(schedule, tutors, calledOff, cover);
-        // date = new Date();
-        // let currentTime = parseFloat((date.getHours() + (date.getMinutes() / 60.0)).toFixed(2));
-        // console.log(currentTime);
+        updateSmartBoard(schedule, tutors);
     }, timeRepeat);
 
-    // when the list is clicked determine which tutor was clicked
-    // this will be use for the overrides/cover 
-    // the technical debt accumulates...
     // I think this is stupid: Use buttons for the hiddenlist lol
+    // Function that handles the hidden list: 
+    // TODO:
+    // Causes an error if they left and stayed "on red" after hours.
     hiddenTutListHTML.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI'){
-        let nombre = event.target.textContent;
-        if(!presentTutors.includes(nombre)){
+        let date = new Date(); 
+        today = dayNames[date.getDay()];
+        let selectedTutor = tutors[event.target.textContent];
+        let tutorHTMLDOM = document.getElementById(selectedTutor["name"]+"-hidden");
+        // I do this to ensure the student can't be added more than once
+        // so check if they are already on there
+        // maybe use a map? , maps are OP
 
-            let subs = tutors[nombre].subjects;
-            tutors[nombre].calledOff=false;
-            addToPublicList(nombre, subs);
+        // If not on the board yet:
+        if(!tutorsCurrPresent.includes(selectedTutor["name"])){
+            let subs = selectedTutor.subjects;
+
+            // If they called off but now is here
+            if(selectedTutor.calledOff){
+                selectedTutor.calledOff = false;
+                tutorHTMLDOM.style.backgroundColor = "";
+            }
+            // If they have extra time
+            else{
+                tutorHTMLDOM.style.backgroundColor = "green";
+                selectedTutor.has_extra_time = true;
+            }
+            addToPublicList(selectedTutor["name"], subs);
         }
+        // If they are on the board
         else{
-            tutors[nombre].calledOff = true;
-            removeFromPublicList(nombre);
+            // They are not here today
+            if((selectedTutor.to_be_working)&&(!selectedTutor.calledOff)){
+                selectedTutor.calledOff = true;
+                tutorHTMLDOM.style.backgroundColor = "red";
+            }
+            // They left after having extra time
+            else if(selectedTutor.has_extra_time){
+                selectedTutor.has_extra_time = false;
+                tutorHTMLDOM.style.backgroundColor = "";
+            }
+            // I don't know how one would have gotten here but okay
+            else{
+                selectedTutor.calledOff = false;
+                selectedTutor.has_extra_time = false;
+            }
+            removeFromPublicList(selectedTutor["name"]);
         }
     }});
 
