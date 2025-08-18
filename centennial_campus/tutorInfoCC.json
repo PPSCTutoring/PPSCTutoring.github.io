@@ -9,9 +9,8 @@
                 "Chemistry"
             ],
             "time":{
-                "Monday":[[9,14]],
-                "Wednesday":[[10,17]],
-                "Thursday":[[9,17]],
+                "Tuesday":[[11,18]],
+                "Wednesday":[[10,18]],
                 "Friday":[[9,14]]
             },
             "to_be_working": false,
@@ -25,10 +24,8 @@
                 "Computer Science"
             ],
             "time":{
-                "Monday":[[14.5, 17]],
-                "Tuesday":[[9,17]],
-                "Wednesday":[[9,17]],
-                "Thursday":[[12.5,17]]
+                "Monday":[[14.5, 18]],
+                "Thursday":[[12.5,18]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -42,22 +39,8 @@
                 "Chemistry"               
             ],
             "time":{
-                "Wednesday":[[9,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
-        },
-        "Neal":{
-            "name":"Neal",
-            "subjects":[
-                "Writing",
-                "Chemistry"
-            ],
-            "time":{
-                "Monday":[[9,17]],
-                "Tuesday":[[9,17]],
-                "Wednesday":[[9,17]]
+                "Tuesday":[[11.5,15.5]],
+                "Friday":[[11,17]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -70,8 +53,8 @@
                 "Writing"
             ],
             "time":{
-                "Monday":[[9,15.5]],
-                "Wednesday":[[9,15.5]]
+                "Monday":[[8,16]],
+                "Tuesday":[[8,10.5],[12.5,16]]
 
             },
             "to_be_working": false, 
@@ -84,9 +67,8 @@
                 "Math"
             ],
             "time":{
-                "Tuesday":[[11,12],[14,17]],
-                "Wednesday":[[11,12],[14,17]],
-                "Thursday":[[11,12],[14,17]]
+                "Monday":[[8,10.5],[12,14.5]],
+                "Wednesday":[[8,10.5],[12,14.5]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -99,9 +81,9 @@
             ],
             "time":{
                 "Monday":[[10.5,17]],
-                "Tuesday":[[10.5,17]],
+                "Tuesday":[[10.5,18]],
                 "Wednesday":[[10.5,17]],
-                "Thursday":[[10.5,17]]
+                "Thursday":[[10.5,18]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -112,12 +94,11 @@
             "subjects":[
                 "Accounting",
                 "Business",
-                "Writing"
+                "English"
             ],
             "time":{
-                "Tuesday":[[9, 17]],
-                "Wednesday":[[9,17]],
-                "Thursday":[[9,17]]
+                "Wednesday":[[9,13]],
+                "Friday":[[9,17]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -126,11 +107,13 @@
         "Dee":{
             "name":"Dee",
             "subjects":[
-                "Zoo"
+                "Zoology/Vet",
+                "English"
             ],
             "time":{
-                "Wednesday":[[9,15]],
-                "Thursday":[[9,15]]
+                "Tuesday":[[12,16]],
+                "Wednesday":[[12,16]],
+                "Thursday":[[12,16]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -142,10 +125,11 @@
                 "Biology"
             ],
             "time":{
-                "Tuesday":[[9,17]],
-                "Wednesday":[[10,15]],
-                "Thursday":[[9,17]],
-                "Friday":[[9,14]]
+                "Monday":[[8,13]],
+                "Tuesday":[[8,13]],
+                "Wednesday":[[8,13]],
+                "Thursday":[[8,13]],
+                "Saturday":[[10,16]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -155,14 +139,13 @@
             "name":"Vanessa",
             "subjects":[
                 "Accounting",
-                "Business",
-                "Writing"
+                "Business"
             ],
             "time":{
-                "Monday":[[9,16]],
+                "Monday":[[8,15]],
                 "Tuesday":[[9,16]],
                 "Wednesday":[[9,16]],
-                "Thursday":[[9,16]]
+                "Thursday":[[8,15]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -174,15 +157,57 @@
                 "Math"
             ],
             "time":{
-                "Monday":[[9,16]],
-                "Tuesday":[[9,16]],
-                "Wednesday":[[9,16]],
-                "Thursday":[[9,16]]
+                "Wednesday":[[10,18]],
+                "Friday":[[9,17]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Kimberly":{
+            "name":"Kimberly",
+            "subjects":[
+                "ESL",
+                "English"
+            ],
+            "time":{
+                "Monday":[[10.5,12.5]],
+                "Tuesday":[[10.5,16]],
+                "Wednesday":[[10.5,12.5]],
+                "Thursday":[[10.5,16]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Heather":{
+            "name":"Heather",
+            "subjects":[
+                "English",
+                "History",
+                "OWL"
+            ],
+            "time":{
+                "Saturday":[[9,15]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Joe":{
+            "name":"Joe",
+            "subjects":[
+                "Math",
+                "Biology",
+                "Nursing"
+            ],
+            "time":{
+                "Wednesday":[[8,15]],
+                "Saturday":[[9,14]]
             },
             "to_be_working": false,
             "called_off": false,
             "has_extra_time": false
         }
-        
    }
 }

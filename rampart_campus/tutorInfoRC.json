@@ -1,0 +1,18 @@
+{
+   "location": "Rampart Campus",
+   "tutors":{
+        "Arnie":{
+            "name": "Arnie",
+            "subjects":[
+                "Being Cool",
+                "@Rampart!!"
+            ],
+            "time":{
+                "Thursday": [[1,23.99]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        }
+   }
+}

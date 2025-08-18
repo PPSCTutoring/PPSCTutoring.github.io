@@ -1,0 +1,65 @@
+"tutor_name":{
+
+    "name":"tutor_name",
+
+    "subjects":[
+        "Subject1",
+        "Subject2",
+        ...
+        "SubjectN"
+    ],
+
+    /* In the format of:
+    Time is in 24 hour format/ military time format !
+    "Day1": [[timein1, timeout1], [timein2, timeout2], ... [timeinX,timeoutX]]
+    "Day2": [[timein1, timeout1], [timein2, timeout2], ... [timeinY,timeoutY]]
+    */
+
+    "time":{
+        "Monday":[[9,14]],
+        "Wednesday":[[10,17]],
+        "Thursday":[[9,17]],
+        "Friday":[[9,14]]
+    },
+
+    /* These are static so no reason to change them */
+    
+    "to_be_working": false,
+    "called_off": false,
+    "has_extra_time": false
+}
+
+ex: 
+
+...,
+
+"Melisa":{
+    "name":"Melisa",
+    "subjects":[
+        "Math",
+        "Writing"
+    ],
+    "time":{
+        "Monday":[[9,15.5]],
+        "Wednesday":[[9,15.5]]
+    },
+    "to_be_working": false, 
+    "called_off": false,
+    "has_extra_time": false
+},
+"Matthew":{
+    "name":"Matthew",
+    "subjects":[
+        "Math"
+    ],
+    "time":{
+        "Tuesday":[[11,12],[14,17]],
+        "Wednesday":[[11,12],[14,17]],
+        "Thursday":[[11,12],[14,17]]
+    },
+    "to_be_working": false,
+    "called_off": false,
+    "has_extra_time": false
+}, 
+
+...

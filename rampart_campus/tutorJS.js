@@ -4,6 +4,9 @@
 
 // Global Variables
 
+var campus = "rampart_campus"
+var json = "tutorInfoRC.json"
+
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
 var body = document.getElementById("body");
@@ -61,13 +64,29 @@ function prettify(arr){
     return ret;
 }
 
+async function getImage(name){
+    try{
+        const response = await fetch("/tut_icons/+"+name+".png", {method: 'HEAD'});
+        return response.ok;
+    }
+    catch(err){
+        console.error(err);
+        return false;
+    }
+}
 
-function addToPublicList(nombre, subs){
+async function addToPublicList(nombre, subs){
     try{
         subs = prettify(subs); 
         let ulAddName = document.createElement('li');
         let tutImg = document.createElement('img');
-        tutImg.src = "tut_icons/"+nombre+".png";
+        getImage(nombre)
+            .then( () => {
+                tutImg.src = "/tut_icons/"+nombre+".png";
+            })
+            .catch( () => {
+                tutImg.src = "/tut_icons/default-image.png"
+            })
         tutImg.width = imgSize;
         tutImg.id = nombre+"-img";
         ulAddName.appendChild(tutImg);
@@ -115,7 +134,6 @@ function fixDisplaySizing(){
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSizeSmall
-
         }
         dotwHTML.style.display = "none";
         presentListHTML.style.borderRadius = borderRadius;
@@ -241,7 +259,7 @@ function updateSmartBoard(schedule, tutors){
 }
 
 async function fetchUsers(){
-    const res = await fetch("tutorInfoCC.json")
+    const res = await fetch(json)
     return res.json();
 }
 

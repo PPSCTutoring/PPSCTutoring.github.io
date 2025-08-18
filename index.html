@@ -2,36 +2,29 @@
 
 <body id="body">
 
+    <title>
+        PPSC Tutoring Campus Select
+    </title>
+
     <head>
         <link href="style.css" rel="stylesheet"
     </head>
+
+    <p id="centennial_campus">
+     <button class="campus-selector shadow" onclick="window.location.href='/centennial_campus/';">
+        Centennial Campus Tutoring
+    </button> 
+    </p>
+    <p id="rampart_campus">
+     <button class="campus-selector shadow rampart_campus_butt">
+        Rampart Campus Tutoring (not working yet!)
+    </button>
+    </p>
+    <div class="options-div">
+        <a class ="options shadow" href="https://sonatica.fm/play" target="_blank">Classical Radio</a>
+        <a class ="options shadow" href="/help/">Help</a>
+    </div>
+
+
     
-    <div class = "buttons">
-        <button id="override-button">
-            <div class="decal"></div>
-            <div class="dropdown-content" id="hidden-tutor-list">
-                <!-- Hidden List goes here-->
-            </div>
-        </button>
-    </div>
-
-
-    <div class="main-lists" id="main-div"> 
-        <p id="tutoring-center">
-            <b></b>
-         </p>
-        <p id="day-of-the-week">
-            
-        </p>
-        <ul id="tutor-list">
-            <!-- The present tutors are here-->
-        </ul>
-    </div>
-
-    <div>
-
-    </div>
-
 </body>
-
-<script src="tutorJS.js"></script>
