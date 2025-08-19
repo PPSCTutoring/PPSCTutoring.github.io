@@ -4,9 +4,6 @@
 
 // Global Variables
 
-var campus = "rampart_campus"
-var json = "tutorInfoRC.json"
-
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
 var body = document.getElementById("body");
@@ -64,57 +61,70 @@ function prettify(arr){
     return ret;
 }
 
-async function getImage(name){
-    try{
-        const response = await fetch("/tut_icons/+"+name+".png", {method: 'HEAD'});
-        return response.ok;
-    }
-    catch(err){
-        console.error(err);
-        return false;
-    }
+async function imgLoad(url){
+    return new Promise((resolve, reject) => {
+        const request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.responseType = "blob";
+        request.onload = () => {
+            if(request.status === 200){
+                resolve(request.response);
+            }
+            else{
+                reject(
+                    Error(
+                        'URL does not exist: ${request.statusText}',
+                    ),
+                );
+            }
+        };
+        request.onerror = () => reject(new Error("Network error"));
+        request.send();
+    });
 }
 
-async function addToPublicList(nombre, subs){
+async function addToPublicList(tutorName, subs){
     try{
         subs = prettify(subs); 
         let ulAddName = document.createElement('li');
-        let tutImg = document.createElement('img');
-        getImage(nombre)
-            .then( () => {
-                tutImg.src = "/tut_icons/"+nombre+".png";
-            })
-            .catch( () => {
-                tutImg.src = "/tut_icons/default-image.png"
-            })
+        var tutImg = document.createElement('img');
+        const imgLocation = "/tut_icons/"+tutorName+".png";
+        await imgLoad(imgLocation).then(
+            (response) => {
+                tutImg.src = imgLocation;
+            },
+            (error) => {
+                tutImg.src = '/tut_icons/default-image.png';
+            },
+        );
         tutImg.width = imgSize;
-        tutImg.id = nombre+"-img";
+        tutImg.id = tutorName+"-img";
         ulAddName.appendChild(tutImg);
-        ulAddName.innerHTML += "<p><span>" + nombre + "</span></p>"+ "<p>"+ subs + "</p>";
-        ulAddName.id = nombre;
+        ulAddName.innerHTML += "<p><span>" + tutorName + "</span></p>"+ "<p>"+ subs + "</p>";
+        ulAddName.id = tutorName;
         presentListHTML.appendChild(ulAddName); 
-        tutorsCurrPresent.push(nombre);
+        tutorsCurrPresent.push(tutorName);
         ulAddName.style.visibility = 'visible';
         fixDisplaySizing();
     }
     catch(err){
-        console.log("Failed to add " + nombre, err);
+        console.log("Failed to add " + tutorName, err);
     }
 
 }
 
-function removeFromPublicList(nombre){
+async function removeFromPublicList(tutorName){
     try{
         // remove from HTML
-        let ulPresent = document.getElementById(nombre);
+        let ulPresent = document.getElementById(tutorName);
         presentListHTML.removeChild(ulPresent);
         // remove from presentTutors list
-        let remTutor = tutorsCurrPresent.indexOf(nombre);
+        let remTutor = tutorsCurrPresent.indexOf(tutorName);
         tutorsCurrPresent.splice(remTutor, 1);
         fixDisplaySizing();
     }
     catch(err){
-        console.log("Failed adding " + nombre, err);
+        console.log("Failed adding " + tutorName, err);
     }
 }
 
@@ -188,7 +198,7 @@ function dailySchedule(tutors){
 // TODO:
 // I dont like this, i'm doing way to much here, should add a function that
 // does the work of the logic for the timeframing on who should be on the board
-function updateSmartBoard(schedule, tutors){
+async function updateSmartBoard(schedule, tutors){
     // init
     let startOfWork = 9;
     let endOfWork = 17;
@@ -212,8 +222,8 @@ function updateSmartBoard(schedule, tutors){
     // add to list if working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
 
-        let nombre = dailyTutors[t]; // string
-        let tutor = tutors[nombre];
+        let tutorName = dailyTutors[t]; // string
+        let tutor = tutors[tutorName];
         let subjects = tutor.subjects; // Array
         let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
         let isWorking = false; // Bool
@@ -232,13 +242,13 @@ function updateSmartBoard(schedule, tutors){
         }
         // TODO: work out the logic of this conditional a bit better
         if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
-            if(!tutorsCurrPresent.includes(nombre)){
-                addToPublicList(nombre, subjects);
+            if(!tutorsCurrPresent.includes(tutorName)){
+                await addToPublicList(tutorName, subjects);
             }
         }
         else{
-            if(tutorsCurrPresent.includes(nombre)){
-                removeFromPublicList(nombre);
+            if(tutorsCurrPresent.includes(tutorName)){
+                await removeFromPublicList(tutorName);
             }
         }
     }
@@ -250,8 +260,8 @@ function updateSmartBoard(schedule, tutors){
     // I should grab everyones data on this list
     if((timeNow < startOfWork)||(timeNow >= endOfWork)){
         for(let t = 0; t < dailyTutors.length; t++){
-            let nombre = dailyTutors[t]; // string
-            let tutor = tutors[nombre];
+            let tutorName = dailyTutors[t]; // string
+            let tutor = tutors[tutorName];
             tutor.calledOff = false;
             tutor.has_extra_time = false;
         }
@@ -259,7 +269,7 @@ function updateSmartBoard(schedule, tutors){
 }
 
 async function fetchUsers(){
-    const res = await fetch(json)
+    const res = await fetch("tutorInfoRC.json")
     return res.json();
 }
 
@@ -282,10 +292,6 @@ async function main(){
             await navigator.wakeLock.request("screen");
         }
         catch(err){
-            wakeLockOff = document.createElement("p");
-            wakeLockOff.textContent = "WAKE LOCK OFF: RELOAD TO ACTIVATE!!!";
-            wakeLockOff.color = "red";
-            tutoringCenterHTML.appendChild(wakeLockOff);
             console.log("Wake lock did not work: ");
             console.log(err);
         }
@@ -295,7 +301,7 @@ async function main(){
 
     wakeUP();
 
-    setInterval(() =>{
+    await setInterval(() =>{
         updateSmartBoard(schedule, tutors);
     }, timeRepeat);
 
@@ -305,7 +311,7 @@ async function main(){
     // TODO:
     // Causes an error if they left and stayed "on red" after hours.
     // Do this somewhere else I hate the fact I'm changing background color here
-    hiddenTutListHTML.addEventListener('click', (event) => {
+    hiddenTutListHTML.addEventListener('click', async (event) => {
     if (event.target.tagName === 'LI'){
         let date = new Date(); 
         today = dayNames[date.getDay()];
@@ -329,7 +335,7 @@ async function main(){
                 tutorHTMLDOM.style.backgroundColor = "green";
                 selectedTutor.has_extra_time = true;
             }
-            addToPublicList(selectedTutor["name"], subs);
+            await addToPublicList(selectedTutor["name"], subs);
         }
         // If they are on the board
         else{
@@ -348,7 +354,7 @@ async function main(){
                 selectedTutor.calledOff = false;
                 selectedTutor.has_extra_time = false;
             }
-            removeFromPublicList(selectedTutor["name"]);
+            await removeFromPublicList(selectedTutor["name"]);
         }
     }});
 
