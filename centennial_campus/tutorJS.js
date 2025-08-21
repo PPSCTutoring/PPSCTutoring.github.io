@@ -227,7 +227,6 @@ async function updateSmartBoard(schedule, tutors){
         let tutor = tutors[tutorName];
         let subjects = tutor.subjects; // Array
         let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
-        let isWorking = false; // Bool
         for(let i = 0; i < timeframe.length; i++){
             start = timeframe[i][0];
             end = timeframe[i][1];
