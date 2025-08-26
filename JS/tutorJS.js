@@ -4,9 +4,13 @@
 
 // Global Variables
 
+var body = document.getElementsByTagName("body");
+// doing this simple if statement for now because there are only two campuses, change to switch statement in the future if >2
+var json = body[0].id == 'centennial' ? '/centennial_campus/tutorInfoCC.json' : '/rampart_campus/tutorInfoRC.json';
+
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
-var body = document.getElementById("body");
+
 var tutorsCurrPresent = [];
 var dotwHTML = document.getElementById("day-of-the-week");
 var spanNames = document.getElementsByTagName("span");
@@ -144,6 +148,7 @@ function fixDisplaySizing(){
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSizeSmall
+
         }
         dotwHTML.style.display = "none";
         presentListHTML.style.borderRadius = borderRadius;
@@ -221,35 +226,37 @@ async function updateSmartBoard(schedule, tutors){
 
     // add to list if working and take off if not working
     for(let t = 0; t < dailyTutors.length; t++){
+        try{
+            let tutorName = dailyTutors[t]; // string
+            let tutor = tutors[tutorName];
+            let subjects = tutor.subjects; // Array
+            let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
+            for(let i = 0; i < timeframe.length; i++){
+                start = timeframe[i][0];
+                end = timeframe[i][1];
 
-        let tutorName = dailyTutors[t]; // string
-        let tutor = tutors[tutorName];
-        let subjects = tutor.subjects; // Array
-        let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
-        let isWorking = false; // Bool
-        for(let i = 0; i < timeframe.length; i++){
-            start = timeframe[i][0];
-            end = timeframe[i][1];
-
-            if((start <= timeNow)&&(timeNow < end)){
-                tutor.to_be_working = true;
-                break;
+                if((start <= timeNow)&&(timeNow < end)){
+                    tutor.to_be_working = true;
+                    break;
+                }
+                else{
+                    tutor.to_be_working = false;
+                }
+            }
+            // TODO: work out the logic of this conditional a bit better
+            if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
+                if(!tutorsCurrPresent.includes(tutorName)){
+                    await addToPublicList(tutorName, subjects);
+                }
             }
             else{
-                tutor.to_be_working = false;
-                break;
+                if(tutorsCurrPresent.includes(tutorName)){
+                    await removeFromPublicList(tutorName);
+                }
             }
         }
-        // TODO: work out the logic of this conditional a bit better
-        if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
-            if(!tutorsCurrPresent.includes(tutorName)){
-                await addToPublicList(tutorName, subjects);
-            }
-        }
-        else{
-            if(tutorsCurrPresent.includes(tutorName)){
-                await removeFromPublicList(tutorName);
-            }
+        catch{
+            console.log(dailyTutors);
         }
     }
 
@@ -269,7 +276,7 @@ async function updateSmartBoard(schedule, tutors){
 }
 
 async function fetchUsers(){
-    const res = await fetch("tutorInfoRC.json")
+    const res = await fetch(json);
     return res.json();
 }
 

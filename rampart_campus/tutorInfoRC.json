@@ -26,7 +26,7 @@
                 "Monday":[[9,14.5]],
                 "Tuesday":[[9,14.5]],
                 "Wednesday":[[9,14.5]],
-                "Thursday":[[9,15]],
+                "Thursday":[[8,14]],
                 "Friday":[[9,14.5]]
             },
             "to_be_working": false,
@@ -138,16 +138,16 @@
             "called_off": false,
             "has_extra_time": false
         },
-        "Kimberly":{
-            "name":"Kimberly",
+        "Kimberly F":{
+            "name":"Kimberly F",
             "subjects":[
                 "English",
                 "History"
             ],
             "time":{
-                "Monday":[[9,11],[12.5,14]],
+                "Monday":[[12.5,14]],
                 "Tuesday":[[9,11],[12.5,14]],
-                "Wednesday":[[9,11],[12.5,14]],
+                "Wednesday":[[12.5,14]],
                 "Thursday":[[9,11],[12.5,14]],
                 "Friday":[[9,11]]
             },
@@ -201,8 +201,8 @@
             "called_off": false,
             "has_extra_time": false
         },
-        "Matthew":{
-            "name":"Matthew",
+        "Matthew H":{
+            "name":"Matthew H",
             "subjects":[
                 "Biology"
             ],
@@ -222,6 +222,19 @@
             "time":{
                 "Tuesday":[[12,16]],
                 "Thursday":[[12,16]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Brandi":{
+            "name":"Brandi",
+            "subjects":[
+                "Math"
+            ],
+            "time":{
+                "Monday":[[12,17]],
+                "Wednesday":[[12,17]]
             },
             "to_be_working": false,
             "called_off": false,
