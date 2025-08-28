@@ -1,6 +1,8 @@
 {
    "location": "Centennial Campus",
    "tutors":{
+
+        
         "Ben":{
             "name":"Ben",
             "subjects":[
@@ -50,7 +52,8 @@
             "name":"Melisa",
             "subjects":[
                 "Math",
-                "Writing"
+                "English",
+                "OWL"
             ],
             "time":{
                 "Monday":[[8,16]],
@@ -260,7 +263,20 @@
             "to_be_working": false,
             "called_off": false,
             "has_extra_time": false
+        },
+        "Evie":{
+            "name":"Evie",
+            "subjects":[
+                "English"
+            ],
+            "time":{
+                "Tuesday":[13,18],
+                "Thursday":[8,13],
+                "Friday":[8,13]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
         }
-        
    }
 }
