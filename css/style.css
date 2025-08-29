@@ -27,8 +27,7 @@ body{
     padding-right: 10px;
     z-index: 1;
     color:white;
-    cursor: pointer;
-    max-width: fit-content;
+    max-width: max-content;
     list-style-type: none;
     box-shadow: 22px 10px 6px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 22px 10px 6px 0px rgba(0,0,0,0.75);
@@ -39,7 +38,7 @@ body{
 .dropdown-content li{
     border-radius: 5%;
     margin-left: 3%;
-    margin-right: 3%;
+    margin-right: 5%;
 }
 
 .dropdown-content li:nth-child(1){
@@ -52,7 +51,7 @@ body{
 
 .dropdown-content li:hover{
     background-color: #f2cbf5;
-    display: block;
+    cursor: pointer;
 }
 
 

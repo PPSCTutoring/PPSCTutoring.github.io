@@ -8,6 +8,8 @@ var body = document.getElementsByTagName("body");
 // doing this simple if statement for now because there are only two campuses, change to switch statement in the future if >2
 var json = body[0].id == 'centennial' ? '/centennial_campus/tutorInfoCC.json' : '/rampart_campus/tutorInfoRC.json';
 
+
+
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
 
@@ -25,6 +27,8 @@ const imageSizeDividerSmall = 13;
 
 var imgSize = screenSize / imageSizeDivider;
 var borderRadius = "90px";
+
+const defaultImage = "/tut_icons/default-image.png";
 
 
 // Functions
@@ -66,25 +70,15 @@ function prettify(arr){
 }
 
 async function imgLoad(url){
-    return new Promise((resolve, reject) => {
-        const request = new XMLHttpRequest();
-        request.open("GET", url);
-        request.responseType = "blob";
-        request.onload = () => {
-            if(request.status === 200){
-                resolve(request.response);
-            }
-            else{
-                reject(
-                    Error(
-                        'URL does not exist: ${request.statusText}',
-                    ),
-                );
-            }
-        };
-        request.onerror = () => reject(new Error("Network error"));
-        request.send();
-    });
+    try{
+        const response = await fetch(url);
+        if(response.ok){
+           return true; 
+        }
+    }
+    catch{
+        return false;
+    }
 }
 
 async function addToPublicList(tutorName, subs){
@@ -93,14 +87,14 @@ async function addToPublicList(tutorName, subs){
         let ulAddName = document.createElement('li');
         var tutImg = document.createElement('img');
         const imgLocation = "/tut_icons/"+tutorName+".png";
-        await imgLoad(imgLocation).then(
-            (response) => {
-                tutImg.src = imgLocation;
-            },
-            (error) => {
-                tutImg.src = '/tut_icons/default-image.png';
-            },
-        );
+        var has_picture = await imgLoad(imgLocation);
+        console.log(has_picture);
+        if(has_picture){
+            tutImg.src = imgLocation;
+        }
+        else{
+            tutImg.src= defaultImage;
+        }
         tutImg.width = imgSize;
         tutImg.id = tutorName+"-img";
         ulAddName.appendChild(tutImg);
@@ -205,8 +199,8 @@ function dailySchedule(tutors){
 // does the work of the logic for the timeframing on who should be on the board
 async function updateSmartBoard(schedule, tutors){
     // init
-    let startOfWork = 9;
-    let endOfWork = 17;
+    let startOfWork = 8;
+    let endOfWork = 18;
     let amOrPm;
     let currentTime = new Date();
 
@@ -234,18 +228,18 @@ async function updateSmartBoard(schedule, tutors){
             for(let i = 0; i < timeframe.length; i++){
                 start = timeframe[i][0];
                 end = timeframe[i][1];
+                tutor.to_be_working = false;
 
                 if((start <= timeNow)&&(timeNow < end)){
                     tutor.to_be_working = true;
                     break;
                 }
-                else{
-                    tutor.to_be_working = false;
-                }
             }
+
             // TODO: work out the logic of this conditional a bit better
             if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
                 if(!tutorsCurrPresent.includes(tutorName)){
+                    console.log(tutorsCurrPresent);
                     await addToPublicList(tutorName, subjects);
                 }
             }
@@ -260,19 +254,19 @@ async function updateSmartBoard(schedule, tutors){
         }
     }
 
-    // when not working/ day has ended
-    // reinititalize everyone
-    // TODO: 
-    // This only grabs people there that day.... uhhh im stupid...
-    // I should grab everyones data on this list
-    if((timeNow < startOfWork)||(timeNow >= endOfWork)){
-        for(let t = 0; t < dailyTutors.length; t++){
-            let tutorName = dailyTutors[t]; // string
-            let tutor = tutors[tutorName];
-            tutor.calledOff = false;
-            tutor.has_extra_time = false;
-        }
-    }
+    // // when not working/ day has ended
+    // // reinititalize everyone
+    // // TODO: 
+    // // This only grabs people there that day.... uhhh im stupid...
+    // // I should grab everyones data on this list
+    // if((timeNow < startOfWork)||(timeNow >= endOfWork)){
+    //     for(let t = 0; t < dailyTutors.length; t++){
+    //         let tutorName = dailyTutors[t]; // string
+    //         let tutor = tutors[tutorName];
+    //         tutor.calledOff = false;
+    //         tutor.has_extra_time = false;
+    //     }
+    // }
 }
 
 async function fetchUsers(){
@@ -332,7 +326,7 @@ async function main(){
         if(!tutorsCurrPresent.includes(selectedTutor["name"])){
             let subs = selectedTutor.subjects;
 
-            // If they called off but now is here
+            // If they called off but now they're here
             if(selectedTutor.calledOff){
                 selectedTutor.calledOff = false;
                 tutorHTMLDOM.style.backgroundColor = "";
@@ -348,6 +342,7 @@ async function main(){
         else{
             // They are not here today
             if((selectedTutor.to_be_working)&&(!selectedTutor.calledOff)){
+                console.log(selectedTutor.to_be_working)
                 selectedTutor.calledOff = true;
                 tutorHTMLDOM.style.backgroundColor = "red";
             }
