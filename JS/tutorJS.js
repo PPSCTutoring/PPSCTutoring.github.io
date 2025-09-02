@@ -88,7 +88,6 @@ async function addToPublicList(tutorName, subs){
         var tutImg = document.createElement('img');
         const imgLocation = "/tut_icons/"+tutorName+".png";
         var has_picture = await imgLoad(imgLocation);
-        console.log(has_picture);
         if(has_picture){
             tutImg.src = imgLocation;
         }
@@ -239,7 +238,6 @@ async function updateSmartBoard(schedule, tutors){
             // TODO: work out the logic of this conditional a bit better
             if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
                 if(!tutorsCurrPresent.includes(tutorName)){
-                    console.log(tutorsCurrPresent);
                     await addToPublicList(tutorName, subjects);
                 }
             }
@@ -342,7 +340,6 @@ async function main(){
         else{
             // They are not here today
             if((selectedTutor.to_be_working)&&(!selectedTutor.calledOff)){
-                console.log(selectedTutor.to_be_working)
                 selectedTutor.calledOff = true;
                 tutorHTMLDOM.style.backgroundColor = "red";
             }

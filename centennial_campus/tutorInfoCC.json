@@ -267,12 +267,12 @@
         "Evie":{
             "name":"Evie",
             "subjects":[
-                "English"
+                "Writing"
             ],
             "time":{
-                "Tuesday":[13,18],
-                "Thursday":[8,13],
-                "Friday":[8,13]
+                "Tuesday":[[13,18]],
+                "Thursday":[[8,13]],
+                "Friday":[[8,13]]
             },
             "to_be_working": false,
             "called_off": false,

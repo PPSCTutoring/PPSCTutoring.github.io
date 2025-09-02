@@ -256,12 +256,11 @@
         "Evie":{
             "name":"Evie",
             "subjects":[
-                "English"
+                "Writing",
+                "Clincial Calculations"
             ],
             "time":{
-                "Tuesday":[13,18],
-                "Thursday":[8,13],
-                "Friday":[8,13]
+                "Monday":[[13,18]]
             },
             "to_be_working": false,
             "called_off": false,
