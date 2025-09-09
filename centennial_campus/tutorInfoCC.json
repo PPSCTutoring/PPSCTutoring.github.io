@@ -131,7 +131,6 @@
                 "Monday":[[8,13]],
                 "Tuesday":[[8,13]],
                 "Wednesday":[[8,13]],
-                "Thursday":[[8,13]],
                 "Saturday":[[10,16]]
             },
             "to_be_working": false,
@@ -145,9 +144,9 @@
                 "Business"
             ],
             "time":{
-                "Monday":[[8,15]],
+                "Monday":[[8,14]],
                 "Tuesday":[[9,16]],
-                "Wednesday":[[9,16]],
+                "Wednesday":[[10,18]],
                 "Thursday":[[8,15]]
             },
             "to_be_working": false,
@@ -273,6 +272,22 @@
                 "Tuesday":[[13,18]],
                 "Thursday":[[8,13]],
                 "Friday":[[8,13]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Jeremiah":{
+            "name":"Jeremiah",
+            "subjects":[
+                "Math"
+            ],
+            "time":{
+                "Monday":[[8,9]],
+                "Tuesday":[[8,9]],
+                "Wednesday":[[8,9]],
+                "Thursday":[[8,9]],
+                "Friday":[[16,17]]
             },
             "to_be_working": false,
             "called_off": false,
