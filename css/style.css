@@ -9,7 +9,7 @@ body{
 #override-button{
     display: inline-block;
     position: relative;
-    font-size:30px;
+    font-size:2.78vh;
     background-color: cornflowerblue;
     padding: 20% 20%;
     z-index: 0;
@@ -54,7 +54,6 @@ body{
     cursor: pointer;
 }
 
-
 #tutoring-center{
     font-family: Arial;
     color: white;
@@ -79,12 +78,12 @@ body{
     margin-top: 0%;
     margin-bottom: 0%;
     border-bottom: white solid;
-    border-bottom-width: 10px;
+    border-bottom-width: 0.93vh;
     margin:auto;
     padding-top: 1%;
     padding-bottom:1%;
-    border-top-left-radius: 175px;
-    border-top-right-radius: 175px;
+    border-top-left-radius: 8.333vh;
+    border-top-right-radius: 8.333vh;
 }
 
 #tutor-list{
@@ -96,14 +95,14 @@ body{
     margin: auto;
     padding:0%;
     text-align: left;
-    border-bottom-left-radius: 90px;
-    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 8.333vh;
+    border-bottom-right-radius: 8.333vh;
 }
 
 #tutor-list li{
     display: grid;
     grid-template-columns: .5fr 2fr 5fr;
-    padding-left: 10%;
+    padding-left: 7.5%;
 
 }
 
@@ -125,6 +124,10 @@ body{
 }
 
 #tutor-list li:nth-last-child(1){
-    border-bottom-left-radius: 90px;
-    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 8.333vh;
+    border-bottom-right-radius: 8.333vh;
+}
+
+#front-desk{
+    background:black;
 }

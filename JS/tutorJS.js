@@ -21,12 +21,15 @@ var tutoringCenterHTML = document.getElementById("tutoring-center");
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 // Display Settings
-var screenSize = screen.availHeight;
+var screenSizeHeight = screen.availHeight;
 const imageSizeDivider = 12;
 const imageSizeDividerSmall = 13;
+const borderRadiusDivider = 12
 
-var imgSize = screenSize / imageSizeDivider;
-var borderRadius = "90px";
+var imgSize = screenSizeHeight / imageSizeDivider;
+var borderRadius = screenSizeHeight / borderRadiusDivider;
+borderRadius = borderRadius.toString() + "px";
+
 
 const defaultImage = "/tut_icons/default-image.png";
 
@@ -284,6 +287,8 @@ async function main(){
     For some stupid ass reason this makes the button press work because for some fucking
     stupid ass reason the style display is empty EVEN THOUGH I DEFINED IT AS NONE IN THE CSS
     */
+
+
     hiddenTutListHTML.style.display = "none"
 
     const wakeUP = async() => {

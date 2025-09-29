@@ -1,8 +1,6 @@
 {
    "location": "Centennial Campus",
    "tutors":{
-
-        
         "Ben":{
             "name":"Ben",
             "subjects":[
@@ -293,5 +291,27 @@
             "called_off": false,
             "has_extra_time": false
         }
+   },
+   "front-desk":{
+        "Jaylin":{
+            "name":"Jaylin",
+            "time":{
+                "Monday":[[12,15]],
+                "Tuesday":[[8,12]],
+                "Wednesday":[[12,15]],
+                "Thursday":[[8,12]]
+            },
+            "to_be_working": false,
+            "called_off": false,
+            "has_extra_time": false
+        },
+        "Gray":{
+            "name":"Gray",
+            "time":{
+                "Monday":[[15,18]]
+                
+            }
+        }
+        
    }
 }

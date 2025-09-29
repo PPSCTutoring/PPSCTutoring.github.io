@@ -4,7 +4,8 @@
         "Shandi":{
             "name":"Shandi",
             "subjects":[
-                "English"
+                "Writing",
+                "OWL"
             ],
             "time":{
                 "Monday":[[9,16]],
@@ -19,8 +20,8 @@
         "Lyndsay":{
             "name":"Lyndsay",
             "subjects":[
-                "English",
-                "Env. Science"
+                "Public Speaking",
+                "Env. Sci"
             ],
             "time":{
                 "Monday":[[9,14.5]],
@@ -96,7 +97,8 @@
         "Loe":{
             "name":"Loe",
             "subjects":[
-                "English"
+                "Writing",
+                "OWL"
             ],
             "time":{
                 "Wednesday":[[9,16]],
@@ -111,7 +113,8 @@
         "Madeline":{
             "name":"Madeline",
             "subjects":[
-                "English"
+                "Writing",
+                "OWL"
             ],
             "time":{
                 "Monday":[[8,16]],
@@ -125,7 +128,7 @@
         "Chloe":{
             "name":"Chloe",
             "subjects":[
-                "English",
+                "Writing",
                 "Math"
             ],
             "time":{
@@ -138,18 +141,18 @@
             "called_off": false,
             "has_extra_time": false
         },
-        "Kimberly F":{
-            "name":"Kimberly F",
+        "Kimberly J":{
+            "name":"Kimberly J",
             "subjects":[
-                "English",
-                "History"
+                "Writing",
+                "History",
+                "HEW"
             ],
             "time":{
                 "Monday":[[12.5,14]],
                 "Tuesday":[[9,11],[12.5,14]],
                 "Wednesday":[[12.5,14]],
-                "Thursday":[[9,11],[12.5,14]],
-                "Friday":[[9,11]]
+                "Thursday":[[9,11],[12.5,14]]
             },
             "to_be_working": false,
             "called_off": false,
@@ -158,8 +161,9 @@
         "Roberta":{
             "name":"Roberta",
             "subjects":[
-                "English",
-                "History"
+                "Writing",
+                "History",
+                "Humanities"
             ],
             "time":{
                 "Monday":[[11,16]],
@@ -174,7 +178,7 @@
         "Ahmed":{
             "name":"Ahmed",
             "subjects":[
-                "English",
+                "Writing",
                 "Biology"
             ],
             "time":{
@@ -190,7 +194,7 @@
         "Brittany":{
             "name":"Brittany",
             "subjects":[
-                "English",
+                "Writing",
                 "Biology",
                 "Nursing"
             ],
@@ -243,8 +247,9 @@
         "Wayne":{
             "name":"Wayne",
             "subjects":[
-                "English",
-                "History"
+                "History",
+                "Writing",
+                "Humanities"
             ],
             "time":{
                 "Thursday":[[11.5,15]]
