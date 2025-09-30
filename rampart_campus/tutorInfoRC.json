@@ -12,10 +12,7 @@
                 "Tuesday":[[9,16]],
                 "Wednesday":[[9,16]],
                 "Friday":[[9,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Lyndsay":{
             "name":"Lyndsay",
@@ -29,10 +26,7 @@
                 "Wednesday":[[9,14.5]],
                 "Thursday":[[8,14]],
                 "Friday":[[9,14.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Tyler":{
             "name":"Tyler",
@@ -44,10 +38,7 @@
             "time":{
                 "Friday":[[8,16]],
                 "Saturday":[[9,15]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Robert":{
             "name":"Robert",
@@ -58,10 +49,7 @@
             "time":{
                 "Monday":[[10.5,15.5]],
                 "Wednesday":[[10.5,15.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "John":{
             "name":"John",
@@ -74,10 +62,7 @@
                 "Tuesday":[[9,15]],
                 "Thursday":[[9,15]],
                 "Friday":[[9,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "River":{
             "name":"River",
@@ -89,10 +74,7 @@
                 "Tuesday":[[10,14.5]],
                 "Wednesday":[[10,18]],
                 "Thursday":[[10.5,18]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Loe":{
             "name":"Loe",
@@ -105,10 +87,7 @@
                 "Thursday":[[9,16]],
                 "Friday":[[9,17]],
                 "Saturday":[[9,15]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Madeline":{
             "name":"Madeline",
@@ -120,10 +99,7 @@
                 "Monday":[[8,16]],
                 "Tuesday":[[8,16]],
                 "Wednesday":[[8,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Chloe":{
             "name":"Chloe",
@@ -136,13 +112,10 @@
                 "Tuesday":[[10,18]],
                 "Wednesday":[[13,17]],
                 "Friday":[[9,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
-        "Kimberly J":{
-            "name":"Kimberly J",
+        "Kimberley F":{
+            "name":"Kimberley F",
             "subjects":[
                 "Writing",
                 "History",
@@ -153,10 +126,7 @@
                 "Tuesday":[[9,11],[12.5,14]],
                 "Wednesday":[[12.5,14]],
                 "Thursday":[[9,11],[12.5,14]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Roberta":{
             "name":"Roberta",
@@ -170,10 +140,7 @@
                 "Wednesday":[[11,16]],
                 "Thursday":[[11,16]],
                 "Friday":[[11,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Ahmed":{
             "name":"Ahmed",
@@ -186,10 +153,7 @@
                 "Wednesday":[[8.5,10.5],[12.5,16]],
                 "Thursday":[[8.5,10.5],[12.5,16]],
                 "Saturday":[[9,12.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Brittany":{
             "name":"Brittany",
@@ -200,10 +164,7 @@
             ],
             "time":{
                 "Monday":[[13.5,17.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Matthew H":{
             "name":"Matthew H",
@@ -213,10 +174,7 @@
             "time":{
                 "Friday":[[9,12.5]],
                 "Saturday":[[9,13.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Megan":{
             "name":"Megan",
@@ -226,10 +184,7 @@
             "time":{
                 "Tuesday":[[12,16]],
                 "Thursday":[[12,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Brandi":{
             "name":"Brandi",
@@ -239,10 +194,7 @@
             "time":{
                 "Monday":[[12,17]],
                 "Wednesday":[[12,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Wayne":{
             "name":"Wayne",
@@ -253,10 +205,7 @@
             ],
             "time":{
                 "Thursday":[[11.5,15]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Evie":{
             "name":"Evie",
@@ -266,10 +215,7 @@
             ],
             "time":{
                 "Monday":[[13,18]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         }
     }
 }

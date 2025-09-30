@@ -12,10 +12,7 @@
                 "Tuesday":[[11,18]],
                 "Wednesday":[[10,18]],
                 "Friday":[[9,14]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Oscar":{
             "name":"Oscar",
@@ -26,10 +23,7 @@
             "time":{
                 "Monday":[[14.5, 18]],
                 "Thursday":[[12.5,18]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Kiela":{
             "name": "Kiela",
@@ -41,10 +35,7 @@
             "time":{
                 "Monday":[[13,18]],
                 "Tuesday":[[11.5,15.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Melisa":{
             "name":"Melisa",
@@ -57,10 +48,7 @@
                 "Monday":[[8,16]],
                 "Tuesday":[[8,10.5],[12.5,16]]
 
-            },
-            "to_be_working": false, 
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Matthew C":{
             "name":"Matthew C",
@@ -70,10 +58,7 @@
             "time":{
                 "Monday":[[8,10.5],[12,14]],
                 "Wednesday":[[8,10.5]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Chris":{
             "name":"Chris",
@@ -85,10 +70,7 @@
                 "Tuesday":[[10.5,18]],
                 "Wednesday":[[10.5,17]],
                 "Thursday":[[10.5,18]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Owen":{
             "name":"Owen",
@@ -100,10 +82,7 @@
             "time":{
                 "Wednesday":[[9,13]],
                 "Friday":[[9,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Dee":{
             "name":"Dee",
@@ -115,10 +94,7 @@
                 "Tuesday":[[12,16]],
                 "Wednesday":[[12,16]],
                 "Thursday":[[12,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Lexy":{
             "name":"Lexy",
@@ -130,10 +106,7 @@
                 "Tuesday":[[8,13]],
                 "Wednesday":[[8,13]],
                 "Saturday":[[10,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Vanessa":{
             "name":"Vanessa",
@@ -146,10 +119,7 @@
                 "Tuesday":[[9,16]],
                 "Wednesday":[[10,18]],
                 "Thursday":[[8,15]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Mykel":{
             "name":"Mykel",
@@ -159,10 +129,7 @@
             "time":{
                 "Wednesday":[[10,18]],
                 "Friday":[[9,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Kimberly S":{
             "name":"Kimberly S",
@@ -175,10 +142,7 @@
                 "Tuesday":[[10.5,16]],
                 "Wednesday":[[10.5,12.5]],
                 "Thursday":[[10.5,16]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Heather":{
             "name":"Heather",
@@ -189,10 +153,7 @@
             ],
             "time":{
                 "Saturday":[[9,15]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Brittany":{
             "name":"Brittany",
@@ -203,10 +164,7 @@
             ],
             "time":{
                 "Friday":[[9,13]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Sandy":{
             "name":"Sandy",
@@ -217,23 +175,17 @@
             ],
             "time":{
                 "Saturday":[[9,14]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
-        "Kimberly F":{
-            "name":"Kimberly F",
+        "Kimberley F":{
+            "name":"Kimberley F",
             "subjects":[
                 "English",
                 "History"
             ],
             "time":{
                 "Friday":[[9,14]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Brandi":{
             "name":"Brandi",
@@ -243,10 +195,7 @@
             "time":{
                 "Tuesday":[[10,11]],
                 "Thursday":[[10,11]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Josh":{
             "name":"Josh",
@@ -256,10 +205,7 @@
             ],
             "time":{
                 "Thursday":[[9,11]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Evie":{
             "name":"Evie",
@@ -270,10 +216,7 @@
                 "Tuesday":[[13,18]],
                 "Thursday":[[8,13]],
                 "Friday":[[8,13]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Jeremiah":{
             "name":"Jeremiah",
@@ -286,10 +229,16 @@
                 "Wednesday":[[8,9]],
                 "Thursday":[[8,9]],
                 "Friday":[[16,17]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
+        },
+        "Zzrnie the Zzrdvark":{
+            "name":"Zzrnie the Zzrdvark",
+            "subjects":[
+                "ZZzzzzz",
+                "You are a loser  ZZrnie.... "
+            ],
+            "time":{
+            }
         }
    },
    "front-desk":{
@@ -300,10 +249,7 @@
                 "Tuesday":[[8,12]],
                 "Wednesday":[[12,15]],
                 "Thursday":[[8,12]]
-            },
-            "to_be_working": false,
-            "called_off": false,
-            "has_extra_time": false
+            }
         },
         "Gray":{
             "name":"Gray",

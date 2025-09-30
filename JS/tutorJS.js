@@ -4,12 +4,6 @@
 
 // Global Variables
 
-var body = document.getElementsByTagName("body");
-// doing this simple if statement for now because there are only two campuses, change to switch statement in the future if >2
-var json = body[0].id == 'centennial' ? '/centennial_campus/tutorInfoCC.json' : '/rampart_campus/tutorInfoRC.json';
-
-
-
 var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
 var presentListHTML = document.getElementById("tutor-list");
 
@@ -30,9 +24,7 @@ var imgSize = screenSizeHeight / imageSizeDivider;
 var borderRadius = screenSizeHeight / borderRadiusDivider;
 borderRadius = borderRadius.toString() + "px";
 
-
 const defaultImage = "/tut_icons/default-image.png";
-
 
 // Functions
 
@@ -84,47 +76,44 @@ async function imgLoad(url){
     }
 }
 
-async function addToPublicList(tutorName, subs){
+async function addToPublicList(tutorObject){
     try{
-        subs = prettify(subs); 
+        let firstName = tutorObject.name.split(" ")[0]
+        let subs = prettify(tutorObject.subjects); 
         let ulAddName = document.createElement('li');
-        var tutImg = document.createElement('img');
-        const imgLocation = "/tut_icons/"+tutorName+".png";
-        var has_picture = await imgLoad(imgLocation);
-        if(has_picture){
-            tutImg.src = imgLocation;
-        }
-        else{
-            tutImg.src= defaultImage;
-        }
+        let tutImg = document.createElement('img');
+        tutImg.src = tutorObject.photo;
         tutImg.width = imgSize;
-        tutImg.id = tutorName+"-img";
+        tutImg.id = tutorObject.name+"-img";
+
         ulAddName.appendChild(tutImg);
-        ulAddName.innerHTML += "<p><span>" + tutorName + "</span></p>"+ "<p>"+ subs + "</p>";
-        ulAddName.id = tutorName;
+        ulAddName.innerHTML += "<p><span>" + firstName + "</span></p>"+ "<p>"+ subs + "</p>";
+        ulAddName.id = tutorObject.name;
         presentListHTML.appendChild(ulAddName); 
-        tutorsCurrPresent.push(tutorName);
+        tutorsCurrPresent.push(tutorObject.name);
         ulAddName.style.visibility = 'visible';
         fixDisplaySizing();
     }
     catch(err){
-        console.log("Failed to add " + tutorName, err);
+        console.log("Failed to add " + tutorObject.name, err);
     }
 
 }
 
-async function removeFromPublicList(tutorName){
+/*TODO: Check first if they are not on there, something may happened
+I wonder if that's what try would do */
+async function removeFromPublicList(tutorObj){
     try{
         // remove from HTML
-        let ulPresent = document.getElementById(tutorName);
+        let ulPresent = document.getElementById(tutorObj.name);
         presentListHTML.removeChild(ulPresent);
         // remove from presentTutors list
-        let remTutor = tutorsCurrPresent.indexOf(tutorName);
+        let remTutor = tutorsCurrPresent.indexOf(tutorObj.name);
         tutorsCurrPresent.splice(remTutor, 1);
         fixDisplaySizing();
     }
     catch(err){
-        console.log("Failed adding " + tutorName, err);
+        console.log("Failed adding " + tutorObj.name, err);
     }
 }
 
@@ -134,13 +123,13 @@ Change font sizes depending on how many people are here
 TODO:
 Seems like 12 people will be working max so for now I'm allowed some laziness
 Would like to eventually calculate screen size and then make font size
-a calculation of how many people are here and the size of the screen
+a function of how many people are here and the size of the screen
 this works for now :)
 */
 function fixDisplaySizing(){
-    var screenSize = screen.availHeight;
+    let screenSize = screen.availHeight;
     if (tutorsCurrPresent.length >= 10){
-        var imgSizeSmall = screenSize / imageSizeDividerSmall;
+        let imgSizeSmall = screenSize / imageSizeDividerSmall;
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSizeSmall
@@ -150,7 +139,7 @@ function fixDisplaySizing(){
         presentListHTML.style.borderRadius = borderRadius;
     }
     else{
-        var imgSize = screenSize / imageSizeDivider;
+        let imgSize = screenSize / imageSizeDivider;
         for(let i = 0; i < tutorsCurrPresent.length; i++){
             let image = document.getElementById(tutorsCurrPresent[i]+"-img");
             image.width = imgSize
@@ -161,7 +150,7 @@ function fixDisplaySizing(){
 }
 
 // create an object of the different days with the tutors who work that day
-// formatted { Monday : [tutor1, tutor2...], Tuesday : ... }
+// formatted { Monday : ["tutor1", "tutor2...""], Tuesday : ... }
 // I only did this because I thought it was slightly better than having to look at every-
 // single tutor from the json and see if they are workign that day :)
 // just seemed more direct lol
@@ -224,29 +213,29 @@ async function updateSmartBoard(schedule, tutors){
     for(let t = 0; t < dailyTutors.length; t++){
         try{
             let tutorName = dailyTutors[t]; // string
-            let tutor = tutors[tutorName];
-            let subjects = tutor.subjects; // Array
-            let timeframe = tutor.time[dayOfWeek]; // 2-Dim Array
+            let tutorObject = tutors[tutorName];
+            
+            let timeframe = tutorObject.time[dayOfWeek]; // 2-Dim Array
             for(let i = 0; i < timeframe.length; i++){
                 start = timeframe[i][0];
                 end = timeframe[i][1];
-                tutor.to_be_working = false;
+                tutorObject.to_be_working = false;
 
                 if((start <= timeNow)&&(timeNow < end)){
-                    tutor.to_be_working = true;
+                    tutorObject.to_be_working = true;
                     break;
                 }
             }
 
             // TODO: work out the logic of this conditional a bit better
-            if((tutor.to_be_working && !tutor.calledOff)||(tutor.has_extra_time)){
+            if((tutorObject.to_be_working && !tutorObject.calledOff)||(tutorObject.has_extra_time)){
                 if(!tutorsCurrPresent.includes(tutorName)){
-                    await addToPublicList(tutorName, subjects);
+                    await addToPublicList(tutorObject);
                 }
             }
             else{
                 if(tutorsCurrPresent.includes(tutorName)){
-                    await removeFromPublicList(tutorName);
+                    await removeFromPublicList(tutorObject);
                 }
             }
         }
@@ -270,15 +259,59 @@ async function updateSmartBoard(schedule, tutors){
     // }
 }
 
-async function fetchUsers(){
+async function fetchUsers(json){
     const res = await fetch(json);
     return res.json();
 }
 
+// O(n)
+async function finishObjects(allTutorObjects){
+
+    const tutorNames = Object.keys(allTutorObjects);
+    
+    for(let i = 0; i< tutorNames.length; i++){
+
+        let tutorObject = allTutorObjects[tutorNames[i]]
+        let imgLocation = "/tut_icons/"+tutorNames[i]+".png";
+
+        let has_picture = await imgLoad(imgLocation);
+
+        if(has_picture){
+            tutorObject.photo = imgLocation;
+        }
+        else{
+            tutorObject.photo = defaultImage;
+        }
+
+        tutorObject.to_be_working = false;
+        tutorObject.calledOff = false;
+        tutorObject.has_extra_time = false;
+    }
+    return allTutorObjects;
+}
+
 async function main(){
+
+    const wakeUP = async() => {
+    try{
+        await navigator.wakeLock.request("screen");
+    }
+    catch(err){
+        console.log("Wake lock did not work: ");
+        console.log(err);
+    }
+    };
+
+    dotwHTML.innerHTML = "<b>" + "Please Wait, Initializing " + "</b>" + screen.availWidth + "x" + screen.availHeight;
+    wakeUP();
+
     // get info from JSON
-    const tutCenterInfo = await fetchUsers();
-    var tutors = tutCenterInfo['tutors'];
+    var body = document.getElementsByTagName("body");
+    // doing this simple if statement for now because there are only two campuses, change to switch statement in the future if >2
+    let json = body[0].id == 'centennial' ? '/centennial_campus/tutorInfoCC.json' : '/rampart_campus/tutorInfoRC.json';
+    const tutCenterInfo = await fetchUsers(json);
+    var tutors = await finishObjects(tutCenterInfo['tutors']);
+
     createHiddenLists(Object.keys(tutors));
     let schedule = dailySchedule(tutors);
     let timeRepeat = 1000
@@ -288,22 +321,11 @@ async function main(){
     stupid ass reason the style display is empty EVEN THOUGH I DEFINED IT AS NONE IN THE CSS
     */
 
-
     hiddenTutListHTML.style.display = "none"
+    
+    /* I. think I jsut have to survie with this from no w on,,, idk why this works but.... it does
+    AAAAAAAAAAAAAAAAAAAAAAA */
 
-    const wakeUP = async() => {
-        try{
-            await navigator.wakeLock.request("screen");
-        }
-        catch(err){
-            console.log("Wake lock did not work: ");
-            console.log(err);
-        }
-    };
-
-    dotwHTML.innerHTML = "<b>" + "INITALIZING " + "</b>" + screen.availWidth + "x" + screen.availHeight;
-
-    wakeUP();
 
     await setInterval(() =>{
         updateSmartBoard(schedule, tutors);
@@ -317,48 +339,47 @@ async function main(){
     // Do this somewhere else I hate the fact I'm changing background color here
     hiddenTutListHTML.addEventListener('click', async (event) => {
     if (event.target.tagName === 'LI'){
-        let date = new Date(); 
+        let date = new Date();
         today = dayNames[date.getDay()];
-        let selectedTutor = tutors[event.target.textContent];
-        let tutorHTMLDOM = document.getElementById(selectedTutor["name"]+"-hidden");
+        let tutorObj = tutors[event.target.textContent];
+        let hiddenTutorHTMLDOM = document.getElementById(tutorObj.name+"-hidden");
         // I do this to ensure the student can't be added more than once
         // so check if they are already on there
         // maybe use a map? , maps are OP
 
         // If not on the board yet:
-        if(!tutorsCurrPresent.includes(selectedTutor["name"])){
-            let subs = selectedTutor.subjects;
+        if(!tutorsCurrPresent.includes(tutorObj.name)){
 
             // If they called off but now they're here
-            if(selectedTutor.calledOff){
-                selectedTutor.calledOff = false;
-                tutorHTMLDOM.style.backgroundColor = "";
+            if(tutorObj.calledOff){
+                tutorObj.calledOff = false;
+                hiddenTutorHTMLDOM.style.backgroundColor = "";
             }
             // If they have extra time
             else{
-                tutorHTMLDOM.style.backgroundColor = "green";
-                selectedTutor.has_extra_time = true;
+                hiddenTutorHTMLDOM.style.backgroundColor = "green";
+                tutorObj.has_extra_time = true;
             }
-            await addToPublicList(selectedTutor["name"], subs);
+            await addToPublicList(tutorObj);
         }
         // If they are on the board
         else{
             // They are not here today
-            if((selectedTutor.to_be_working)&&(!selectedTutor.calledOff)){
-                selectedTutor.calledOff = true;
-                tutorHTMLDOM.style.backgroundColor = "red";
+            if((tutorObj.to_be_working)&&(!tutorObj.calledOff)){
+                tutorObj.calledOff = true;
+                hiddenTutorHTMLDOM.style.backgroundColor = "red";
             }
             // They left after having extra time
-            else if(selectedTutor.has_extra_time){
-                selectedTutor.has_extra_time = false;
-                tutorHTMLDOM.style.backgroundColor = "";
+            else if(tutorObj.has_extra_time){
+                tutorObj.has_extra_time = false;
+                hiddenTutorHTMLDOM.style.backgroundColor = "";
             }
             // I don't know how one would have gotten here but okay
             else{
-                selectedTutor.calledOff = false;
-                selectedTutor.has_extra_time = false;
+                tutorObj.calledOff = false;
+                tutorObj.has_extra_time = false;
             }
-            await removeFromPublicList(selectedTutor["name"]);
+            await removeFromPublicList(tutorObj);
         }
     }});
 
