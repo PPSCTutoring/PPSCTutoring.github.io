@@ -41,7 +41,7 @@
             "name":"Melisa",
             "subjects":[
                 "Math",
-                "English",
+                "Writing",
                 "OWL"
             ],
             "time":{
@@ -77,7 +77,7 @@
             "subjects":[
                 "Accounting",
                 "Business",
-                "English"
+                "Writing"
             ],
             "time":{
                 "Wednesday":[[9,13]],
@@ -88,7 +88,7 @@
             "name":"Dee",
             "subjects":[
                 "Zoology/Vet",
-                "English"
+                "Writing"
             ],
             "time":{
                 "Tuesday":[[12,16]],
@@ -135,7 +135,7 @@
             "name":"Kimberly S",
             "subjects":[
                 "ESL",
-                "English"
+                "Writing"
             ],
             "time":{
                 "Monday":[[10.5,12.5]],
@@ -147,7 +147,7 @@
         "Heather":{
             "name":"Heather",
             "subjects":[
-                "English",
+                "Writing",
                 "History",
                 "OWL"
             ],
@@ -155,11 +155,23 @@
                 "Saturday":[[9,15]]
             }
         },
+        "Erik":{
+            "name":"Erik",
+            "subjects":[
+                "Writing"
+            ],
+            "time":{
+                "Monday":[[8,13]],
+                "Tuesday":[[8,13]],
+                "Wednesday":[[8,13]],
+                "Thursday":[[13,18]]
+            }
+        },
         "Brittany":{
             "name":"Brittany",
             "subjects":[
                 "Biology",
-                "English",
+                "Writing",
                 "Nursing"
             ],
             "time":{
@@ -180,8 +192,9 @@
         "Kimberley F":{
             "name":"Kimberley F",
             "subjects":[
-                "English",
-                "History"
+                "Writing",
+                "History",
+                "HEW"
             ],
             "time":{
                 "Friday":[[9,14]]

@@ -4,14 +4,14 @@
 
 // Global Variables
 
-var hiddenTutListHTML = document.getElementById("hidden-tutor-list");
-var presentListHTML = document.getElementById("tutor-list");
+const hiddenTutListHTML = document.getElementById("hidden-tutor-list");
+const presentListHTML = document.getElementById("tutor-list");
 
 var tutorsCurrPresent = [];
-var dotwHTML = document.getElementById("day-of-the-week");
-var spanNames = document.getElementsByTagName("span");
-var overrideButton = document.getElementById("override-button");
-var tutoringCenterHTML = document.getElementById("tutoring-center");
+const dotwHTML = document.getElementById("day-of-the-week");
+const spanNames = document.getElementsByTagName("span");
+const overrideButton = document.getElementById("override-button");
+const tutoringCenterHTML = document.getElementById("tutoring-center");
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 // Display Settings
@@ -271,7 +271,7 @@ async function finishObjects(allTutorObjects){
     
     for(let i = 0; i< tutorNames.length; i++){
 
-        let tutorObject = allTutorObjects[tutorNames[i]]
+        let tutorObject = allTutorObjects[tutorNames[i]];
         let imgLocation = "/tut_icons/"+tutorNames[i]+".png";
 
         let has_picture = await imgLoad(imgLocation);
@@ -309,6 +309,7 @@ async function main(){
     var body = document.getElementsByTagName("body");
     // doing this simple if statement for now because there are only two campuses, change to switch statement in the future if >2
     let json = body[0].id == 'centennial' ? '/centennial_campus/tutorInfoCC.json' : '/rampart_campus/tutorInfoRC.json';
+    dotwHTML.innerHTML = "<b>" + "Adding Photos..." + "</b>" + screen.availWidth + "x" + screen.availHeight;
     const tutCenterInfo = await fetchUsers(json);
     var tutors = await finishObjects(tutCenterInfo['tutors']);
 
