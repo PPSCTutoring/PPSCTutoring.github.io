@@ -216,6 +216,18 @@
             "time":{
                 "Monday":[[13,18]]
             }
+        },
+        "Makenzie":{
+            "name":"Makenzie",
+            "subjects":[
+                "Writing"
+            ],
+            "time":{
+                "Monday":[[12.5,18]],
+                "Tuesday":[[10,11],[14,18]],
+                "Wednesday":[[12.5,18]],
+                "Thursday":[[8,12]]
+            }
         }
     }
 }
