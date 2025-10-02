@@ -76,6 +76,31 @@ async function imgLoad(url){
     }
 }
 
+function changeHiddenColor(tutorObject){
+    tutorHiddenName = document.getElementById(tutorObject.name+"-hidden");
+    if(!tutorObject.calledOff && tutorObject.to_be_working && !tutorObject.has_extra_time){
+        tutorHiddenName.style.backgroundColor= "pink";
+    }
+    else if(tutorObject.calledOff && tutorObject.to_be_working && !tutorObject.has_extra_time){
+        tutorHiddenName.style.backgroundColor="red";
+    }
+    else if(!tutorObject.calledOff && !tutorObject.to_be_working && tutorObject.has_extra_time){
+        tutorHiddenName.style.backgroundColor="green";
+    }
+    // this is a case of someone who called off but they are not working in the scheduled timeframe anymore
+    // this is the only known glitch so far but I'll fix it later cause it's not gonna kill naything (ihope)
+    else if(tutorObject.calledOff && !tutorObject.to_be_working && !tutorObject.has_extra_time){
+        tutorHiddenName.style.backgroundColor="";
+    }
+    // how the hell do u reach this point
+    else{
+        tutorObject.calledOff = false
+        tutorObject.to_be_working = false
+        tutorObject.has_extra_time = false
+        tutorHiddenName.style.backgroundColor = "";
+    }
+}
+
 async function addToPublicList(tutorObject){
     try{
         let firstName = tutorObject.name.split(" ")[0]
@@ -92,6 +117,7 @@ async function addToPublicList(tutorObject){
         presentListHTML.appendChild(ulAddName); 
         tutorsCurrPresent.push(tutorObject.name);
         ulAddName.style.visibility = 'visible';
+        changeHiddenColor(tutorObject)
         fixDisplaySizing();
     }
     catch(err){
@@ -110,12 +136,14 @@ async function removeFromPublicList(tutorObj){
         // remove from presentTutors list
         let remTutor = tutorsCurrPresent.indexOf(tutorObj.name);
         tutorsCurrPresent.splice(remTutor, 1);
+        changeHiddenColor(tutorObj)
         fixDisplaySizing();
     }
     catch(err){
         console.log("Failed adding " + tutorObj.name, err);
     }
 }
+
 
 
 /* 
@@ -227,7 +255,6 @@ async function updateSmartBoard(schedule, tutors){
                 }
             }
 
-            // TODO: work out the logic of this conditional a bit better
             if((tutorObject.to_be_working && !tutorObject.calledOff)||(tutorObject.has_extra_time)){
                 if(!tutorsCurrPresent.includes(tutorName)){
                     await addToPublicList(tutorObject);
@@ -354,11 +381,9 @@ async function main(){
             // If they called off but now they're here
             if(tutorObj.calledOff){
                 tutorObj.calledOff = false;
-                hiddenTutorHTMLDOM.style.backgroundColor = "";
             }
             // If they have extra time
             else{
-                hiddenTutorHTMLDOM.style.backgroundColor = "green";
                 tutorObj.has_extra_time = true;
             }
             await addToPublicList(tutorObj);
@@ -368,12 +393,10 @@ async function main(){
             // They are not here today
             if((tutorObj.to_be_working)&&(!tutorObj.calledOff)){
                 tutorObj.calledOff = true;
-                hiddenTutorHTMLDOM.style.backgroundColor = "red";
             }
             // They left after having extra time
             else if(tutorObj.has_extra_time){
                 tutorObj.has_extra_time = false;
-                hiddenTutorHTMLDOM.style.backgroundColor = "";
             }
             // I don't know how one would have gotten here but okay
             else{

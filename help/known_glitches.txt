@@ -1,0 +1,2 @@
+When I remove someone that is scheduled and then I try to add them back once they are not scheudled, they disappear and have to
+be readded:/
