@@ -84,6 +84,17 @@
                 "Friday":[[9,17]]
             }
         },
+        "Sergio":{
+            "name":"Sergio",
+            "subjects":[
+                "Biology"
+            ],
+            "time":{
+                "Wednesday":[[11,16]],
+                "Thursday":[[11,16]],
+                "Friday":[[11,16]]
+            }
+        },
         "Dee":{
             "name":"Dee",
             "subjects":[
