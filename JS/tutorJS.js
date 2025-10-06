@@ -92,7 +92,8 @@ function changeHiddenColor(tutorObject){
     else if(tutorObject.calledOff && !tutorObject.to_be_working && !tutorObject.has_extra_time){
         tutorHiddenName.style.backgroundColor="";
     }
-    // how the hell do u reach this point
+    // how the hell do u reach this point 
+    // update: i know how you reach this point ... 
     else{
         tutorObject.calledOff = false
         tutorObject.to_be_working = false

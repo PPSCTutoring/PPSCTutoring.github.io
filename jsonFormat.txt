@@ -22,11 +22,7 @@
         "Friday":[[9,14]]
     },
 
-    /* These are static so no reason to change them */
-    
-    "to_be_working": false,
-    "called_off": false,
-    "has_extra_time": false
+
 }
 
 ex: 
@@ -43,9 +39,7 @@ ex:
         "Monday":[[9,15.5]],
         "Wednesday":[[9,15.5]]
     },
-    "to_be_working": false, 
-    "called_off": false,
-    "has_extra_time": false
+
 },
 "Matthew":{
     "name":"Matthew",
@@ -57,9 +51,7 @@ ex:
         "Wednesday":[[11,12],[14,17]],
         "Thursday":[[11,12],[14,17]]
     },
-    "to_be_working": false,
-    "called_off": false,
-    "has_extra_time": false
+
 }, 
 
 ...
