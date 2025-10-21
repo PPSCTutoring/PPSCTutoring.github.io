@@ -1,6 +1,8 @@
 body{
     display:grid;
+    /* This is the old grid  */
     grid-template-columns: 1fr 11.3fr 1fr;
+
     background-image:url("/bgimage.png") ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -127,7 +129,8 @@ body{
     border-bottom-left-radius: 8.333vh;
     border-bottom-right-radius: 8.333vh;
 }
-
+/*
 #front-desk{
     background:black;
 }
+*/

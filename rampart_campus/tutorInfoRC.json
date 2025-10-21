@@ -1,232 +1,602 @@
 {
-   "location": "Rampart Campus",
-   "tutors":{
-        "Shandi":{
-            "name":"Shandi",
-            "subjects":[
+    "location": "Rampart",
+    "tutors": {
+        "Shandi": {
+            "name": "Shandi",
+            "time": {
+                "Monday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "OWL"
-            ],
-            "time":{
-                "Monday":[[9,16]],
-                "Tuesday":[[9,16]],
-                "Wednesday":[[9,16]],
-                "Friday":[[9,16]]
-            }
+            ]
         },
-        "Lyndsay":{
-            "name":"Lyndsay",
-            "subjects":[
-                "Public Speaking",
-                "Env. Sci"
-            ],
-            "time":{
-                "Monday":[[9,14.5]],
-                "Tuesday":[[9,14.5]],
-                "Wednesday":[[9,14.5]],
-                "Thursday":[[8,14]],
-                "Friday":[[9,14.5]]
-            }
+        "Lyndsay": {
+            "name": "Lyndsay",
+            "time": {
+                "Monday": [
+                    [
+                        9.0,
+                        14.5
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        9.0,
+                        14.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        9.0,
+                        14.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        14.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        14.5
+                    ]
+                ]
+            },
+            "subjects": [
+                "Env. Science",
+                "Public Speaking"
+            ]
         },
-        "Tyler":{
-            "name":"Tyler",
-            "subjects":[
+        "Tyler": {
+            "name": "Tyler",
+            "time": {
+                "Friday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Math",
                 "Physics",
                 "Chemistry"
-            ],
-            "time":{
-                "Friday":[[8,16]],
-                "Saturday":[[9,15]]
-            }
+            ]
         },
-        "Robert":{
-            "name":"Robert",
-            "subjects":[
+        "Robert": {
+            "name": "Robert",
+            "time": {
+                "Monday": [
+                    [
+                        10.5,
+                        15.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        10.5,
+                        15.5
+                    ]
+                ]
+            },
+            "subjects": [
                 "Math",
                 "Physics"
-            ],
-            "time":{
-                "Monday":[[10.5,15.5]],
-                "Wednesday":[[10.5,15.5]]
-            }
+            ]
         },
-        "John":{
-            "name":"John",
-            "subjects":[
+        "John": {
+            "name": "John",
+            "time": {
+                "Tuesday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        17.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Math",
                 "Computer Science",
                 "Physics"
-            ],
-            "time":{
-                "Tuesday":[[9,15]],
-                "Thursday":[[9,15]],
-                "Friday":[[9,17]]
-            }
+            ]
         },
-        "River":{
-            "name":"River",
-            "subjects":[
+        "River": {
+            "name": "River",
+            "time": {
+                "Monday": [
+                    [
+                        10.0,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        10.0,
+                        14.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        10.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        10.5,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Math"
-            ],
-            "time":{
-                "Monday":[[10,18]],
-                "Tuesday":[[10,14.5]],
-                "Wednesday":[[10,18]],
-                "Thursday":[[10.5,18]]
-            }
+            ]
         },
-        "Loe":{
-            "name":"Loe",
-            "subjects":[
+        "Loe": {
+            "name": "Loe",
+            "time": {
+                "Wednesday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        17.0
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "OWL"
-            ],
-            "time":{
-                "Wednesday":[[9,16]],
-                "Thursday":[[9,16]],
-                "Friday":[[9,17]],
-                "Saturday":[[9,15]]
-            }
+            ]
         },
-        "Madeline":{
-            "name":"Madeline",
-            "subjects":[
+        "Madeline": {
+            "name": "Madeline",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "OWL"
-            ],
-            "time":{
-                "Monday":[[8,16]],
-                "Tuesday":[[8,16]],
-                "Wednesday":[[8,16]]
-            }
+            ]
         },
-        "Chloe":{
-            "name":"Chloe",
-            "subjects":[
+        "Chloe": {
+            "name": "Chloe",
+            "time": {
+                "Monday": [
+                    [
+                        10.0,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        10.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        13.0,
+                        17.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        17.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "Math"
-            ],
-            "time":{
-                "Monday":[[10,18]],
-                "Tuesday":[[10,18]],
-                "Wednesday":[[13,17]],
-                "Friday":[[9,17]]
-            }
+            ]
         },
-        "Kimberley F":{
-            "name":"Kimberley F",
-            "subjects":[
+        "Roberta": {
+            "name": "Roberta",
+            "time": {
+                "Monday": [
+                    [
+                        11.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        11.0,
+                        16.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        11.0,
+                        16.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        11.0,
+                        16.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "History",
-                "HEW"
-            ],
-            "time":{
-                "Monday":[[12.5,14]],
-                "Tuesday":[[9,11],[12.5,14]],
-                "Wednesday":[[12.5,14]],
-                "Thursday":[[9,11],[12.5,14]]
-            }
+                "Humanites"
+            ]
         },
-        "Roberta":{
-            "name":"Roberta",
-            "subjects":[
-                "Writing",
-                "History",
-                "Humanities"
-            ],
-            "time":{
-                "Monday":[[11,16]],
-                "Wednesday":[[11,16]],
-                "Thursday":[[11,16]],
-                "Friday":[[11,16]]
-            }
-        },
-        "Ahmed":{
-            "name":"Ahmed",
-            "subjects":[
+        "Ahmed": {
+            "name": "Ahmed",
+            "time": {
+                "Monday": [
+                    [
+                        9.0,
+                        10.5
+                    ],
+                    [
+                        12.5,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        9.0,
+                        10.5
+                    ],
+                    [
+                        12.5,
+                        16.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        9.0,
+                        10.5
+                    ],
+                    [
+                        12.5,
+                        16.0
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "Biology"
-            ],
-            "time":{
-                "Monday":[[8.5,10.5],[12.5,16]],
-                "Wednesday":[[8.5,10.5],[12.5,16]],
-                "Thursday":[[8.5,10.5],[12.5,16]],
-                "Saturday":[[9,12.5]]
-            }
+            ]
         },
-        "Brittany":{
-            "name":"Brittany",
-            "subjects":[
+        "Brittany": {
+            "name": "Brittany",
+            "time": {
+                "Monday": [
+                    [
+                        13.5,
+                        17.5
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
                 "Biology",
                 "Nursing"
-            ],
-            "time":{
-                "Monday":[[13.5,17.5]]
-            }
+            ]
         },
-        "Matthew H":{
-            "name":"Matthew H",
-            "subjects":[
+        "Matthew H": {
+            "name": "Matthew H",
+            "time": {
+                "Friday": [
+                    [
+                        9.0,
+                        12.5
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        13.5
+                    ]
+                ]
+            },
+            "subjects": [
                 "Biology"
-            ],
-            "time":{
-                "Friday":[[9,12.5]],
-                "Saturday":[[9,13.5]]
-            }
+            ]
         },
-        "Megan":{
-            "name":"Megan",
-            "subjects":[
+        "Megan": {
+            "name": "Megan",
+            "time": {
+                "Tuesday": [
+                    [
+                        12.0,
+                        15.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        12.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Biology"
-            ],
-            "time":{
-                "Tuesday":[[12,16]],
-                "Thursday":[[12,16]]
-            }
+            ]
         },
-        "Brandi":{
-            "name":"Brandi",
-            "subjects":[
+        "Brandi": {
+            "name": "Brandi",
+            "time": {
+                "Monday": [
+                    [
+                        12.0,
+                        17.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.5,
+                        17.5
+                    ]
+                ]
+            },
+            "subjects": [
                 "Math"
-            ],
-            "time":{
-                "Monday":[[12,17]],
-                "Wednesday":[[12,17]]
-            }
+            ]
         },
-        "Wayne":{
-            "name":"Wayne",
-            "subjects":[
-                "History",
+        "Wayne": {
+            "name": "Wayne",
+            "time": {
+                "Thursday": [
+                    [
+                        11.5,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
-                "Humanities"
-            ],
-            "time":{
-                "Thursday":[[11.5,15]]
-            }
+                "History"
+            ]
         },
-        "Evie":{
-            "name":"Evie",
-            "subjects":[
+        "Evie": {
+            "name": "Evie",
+            "time": {
+                "Monday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing",
-                "Clincial Calculations"
-            ],
-            "time":{
-                "Monday":[[13,18]]
-            }
+                "Biology",
+                "Clinical Calc"
+            ]
         },
-        "Makenzie":{
-            "name":"Makenzie",
-            "subjects":[
+        "Makenzie": {
+            "name": "Makenzie",
+            "time": {
+                "Monday": [
+                    [
+                        12.5,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        10.0,
+                        11.0
+                    ],
+                    [
+                        14.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.5,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        12.0
+                    ]
+                ]
+            },
+            "subjects": [
                 "Writing"
-            ],
-            "time":{
-                "Monday":[[12.5,18]],
-                "Tuesday":[[10,11],[14,18]],
-                "Wednesday":[[12.5,18]],
-                "Thursday":[[8,12]]
+            ]
+        },
+        "Kimberley": {
+            "name": "Kimberley",
+            "time": {
+                "Monday": [
+                    [
+                        12.5,
+                        14.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        9.0,
+                        11.0
+                    ],
+                    [
+                        12.5,
+                        14.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.5,
+                        14.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        9.0,
+                        11.0
+                    ],
+                    [
+                        12.5,
+                        14.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Writing",
+                "History",
+                "HWE"
+            ]
+        }
+    },
+    "front_desk": {
+        "Jake": {
+            "name": "Jake",
+            "time": {
+                "Monday": [
+                    [
+                        14.0,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ]
+            }
+        },
+        "Jill": {
+            "name": "Jill",
+            "time": {
+                "Monday": [
+                    [
+                        10.0,
+                        14.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        14.5,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        12.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        13.0,
+                        16.5
+                    ]
+                ]
             }
         }
     }
