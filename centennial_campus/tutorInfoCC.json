@@ -373,13 +373,13 @@
                 "Tuesday": [
                     [
                         10.25,
-                        11.25
+                        11.75
                     ]
                 ],
                 "Thursday": [
                     [
                         10.25,
-                        11.25
+                        11.75
                     ]
                 ]
             },
@@ -524,6 +524,33 @@
             },
             "subjects": [
                 "Math"
+            ]
+        },
+        "Chancey": {
+            "name": "Chancey",
+            "time": {
+                "Tuesday": [
+                    [
+                        11.0,
+                        17.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        11.0,
+                        17.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        8.0,
+                        12.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Writing",
+                "PCApplications"
             ]
         },
         "Kimberley": {

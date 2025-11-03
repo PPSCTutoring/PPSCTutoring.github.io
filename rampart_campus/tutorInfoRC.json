@@ -348,22 +348,6 @@
                 "Biology"
             ]
         },
-        "Brittany": {
-            "name": "Brittany",
-            "time": {
-                "Monday": [
-                    [
-                        13.5,
-                        17.5
-                    ]
-                ]
-            },
-            "subjects": [
-                "Writing",
-                "Biology",
-                "Nursing"
-            ]
-        },
         "Matthew H": {
             "name": "Matthew H",
             "time": {
