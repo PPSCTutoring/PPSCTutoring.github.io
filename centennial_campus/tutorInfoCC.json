@@ -178,8 +178,8 @@
             "time": {
                 "Wednesday": [
                     [
-                        9.0,
-                        13.0
+                        8.0,
+                        15.0
                     ]
                 ]
             },
@@ -405,22 +405,16 @@
         "Sergio": {
             "name": "Sergio",
             "time": {
+                "Tuesday": [
+                    [
+                        10.0,
+                        17.0
+                    ]
+                ],
                 "Wednesday": [
                     [
-                        11.0,
-                        16.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        11.0,
-                        16.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        11.0,
-                        16.0
+                        10.0,
+                        17.0
                     ]
                 ]
             },
@@ -460,34 +454,6 @@
                 "Writing"
             ]
         },
-        "Evie": {
-            "name": "Evie",
-            "time": {
-                "Tuesday": [
-                    [
-                        13.0,
-                        18.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        8.0,
-                        13.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        8.0,
-                        13.0
-                    ]
-                ]
-            },
-            "subjects": [
-                "Writing",
-                "Biology",
-                "Clinical Calc"
-            ]
-        },
         "Jeremiah": {
             "name": "Jeremiah",
             "time": {
@@ -523,7 +489,29 @@
                 ]
             },
             "subjects": [
-                "Math"
+                "Math",
+                "Writing"
+            ]
+        },
+        "Andrew": {
+            "name": "Andrew",
+            "time": {
+                "Tuesday": [
+                    [
+                        13.0,
+                        17.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.0,
+                        17.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Biology",
+                "Anatomy"
             ]
         },
         "Chancey": {
@@ -544,7 +532,7 @@
                 "Friday": [
                     [
                         8.0,
-                        12.0
+                        14.0
                     ]
                 ]
             },

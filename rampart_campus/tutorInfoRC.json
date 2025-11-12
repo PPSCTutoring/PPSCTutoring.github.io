@@ -188,13 +188,13 @@
                 "Thursday": [
                     [
                         9.0,
-                        16.0
+                        16.5
                     ]
                 ],
                 "Friday": [
                     [
                         9.0,
-                        17.0
+                        16.5
                     ]
                 ],
                 "Saturday": [
@@ -421,22 +421,6 @@
             "subjects": [
                 "Writing",
                 "History"
-            ]
-        },
-        "Evie": {
-            "name": "Evie",
-            "time": {
-                "Monday": [
-                    [
-                        13.0,
-                        18.0
-                    ]
-                ]
-            },
-            "subjects": [
-                "Writing",
-                "Biology",
-                "Clinical Calc"
             ]
         },
         "Makenzie": {
