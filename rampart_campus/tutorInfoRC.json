@@ -423,6 +423,70 @@
                 "History"
             ]
         },
+        "Yasmeen": {
+            "name": "Yasmeen",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        12.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math"
+            ]
+        },
+        "Kenzie": {
+            "name": "Kenzie",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        11.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        11.0,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math"
+            ]
+        },
         "Makenzie": {
             "name": "Makenzie",
             "time": {
