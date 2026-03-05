@@ -145,6 +145,39 @@
                 "Physics"
             ]
         },
+        "Josephina": {
+            "name": "Josephina",
+            "time": {
+                "Monday": [
+                    [
+                        11.5,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        11.5,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        14.0,
+                        17.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        11.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Biology",
+                "PSY"
+            ]
+        },
         "Kim": {
             "name": "Kim",
             "time": {
@@ -416,6 +449,27 @@
                 "OWL"
             ]
         },
+        "Tom": {
+            "name": "Tom",
+            "time": {
+                "Tuesday": [
+                    [
+                        8.0,
+                        10.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        10.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math",
+                "Physics"
+            ]
+        },
         "Tyler": {
             "name": "Tyler",
             "time": {
@@ -493,6 +547,41 @@
         }
     },
     "front_desk": {
+        "Heaven": {
+            "name": "Heaven",
+            "time": {
+                "Monday": [
+                    [
+                        8.5,
+                        12.5
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.5,
+                        12.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.5,
+                        12.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.5,
+                        12.5
+                    ]
+                ],
+                "Friday": [
+                    [
+                        8.5,
+                        12.5
+                    ]
+                ]
+            }
+        },
         "Jill": {
             "name": "Jill",
             "time": {

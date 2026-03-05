@@ -495,6 +495,39 @@
                 "Math"
             ]
         },
+        "Tom": {
+            "name": "Tom",
+            "time": {
+                "Tuesday": [
+                    [
+                        13.5,
+                        16.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.5,
+                        16.5
+                    ]
+                ],
+                "Friday": [
+                    [
+                        12.5,
+                        17.0
+                    ]
+                ],
+                "Saturday": [
+                    [
+                        9.0,
+                        14.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math",
+                "Physics"
+            ]
+        },
         "Vanessa": {
             "name": "Vanessa",
             "time": {
