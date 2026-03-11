@@ -17,6 +17,27 @@
                 "PHI"
             ]
         },
+        "Alyssa": {
+            "name": "Alyssa",
+            "time": {
+                "Tuesday": [
+                    [
+                        13.5,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.5,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Biology",
+                "Math"
+            ]
+        },
         "Andrew": {
             "name": "Andrew",
             "time": {
@@ -26,9 +47,21 @@
                         18.0
                     ]
                 ],
+                "Tuesday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ],
                 "Wednesday": [
                     [
                         14.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.0,
                         18.0
                     ]
                 ]
@@ -421,26 +454,26 @@
             "time": {
                 "Monday": [
                     [
-                        9.0,
-                        13.0
+                        10.0,
+                        17.0
                     ]
                 ],
                 "Tuesday": [
                     [
-                        9.0,
-                        13.0
+                        10.0,
+                        17.0
                     ]
                 ],
                 "Wednesday": [
                     [
-                        9.0,
-                        16.0
+                        10.0,
+                        17.0
                     ]
                 ],
                 "Friday": [
                     [
-                        9.0,
-                        16.0
+                        10.0,
+                        17.0
                     ]
                 ]
             },
@@ -449,8 +482,8 @@
                 "OWL"
             ]
         },
-        "Tom": {
-            "name": "Tom",
+        "Tom M": {
+            "name": "Tom M",
             "time": {
                 "Tuesday": [
                     [

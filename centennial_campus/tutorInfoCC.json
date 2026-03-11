@@ -1,32 +1,25 @@
 {
     "location": "Centennial",
     "tutors": {
-        "Andrew": {
-            "name": "Andrew",
+        "Alyssa": {
+            "name": "Alyssa",
             "time": {
-                "Tuesday": [
+                "Monday": [
                     [
-                        13.0,
-                        15.0
-                    ],
-                    [
-                        17.0,
+                        13.5,
                         18.0
                     ]
                 ],
-                "Thursday": [
+                "Friday": [
                     [
-                        13.0,
-                        15.0
-                    ],
-                    [
-                        17.0,
-                        18.0
+                        8.0,
+                        14.5
                     ]
                 ]
             },
             "subjects": [
-                "Biology"
+                "Biology",
+                "Math"
             ]
         },
         "Ben": {
@@ -495,8 +488,8 @@
                 "Math"
             ]
         },
-        "Tom": {
-            "name": "Tom",
+        "Tom M": {
+            "name": "Tom M",
             "time": {
                 "Tuesday": [
                     [
@@ -519,13 +512,36 @@
                 "Saturday": [
                     [
                         9.0,
-                        14.0
+                        14.5
                     ]
                 ]
             },
             "subjects": [
                 "Math",
                 "Physics"
+            ]
+        },
+        "Tom W": {
+            "name": "Tom W",
+            "time": {
+                "Tuesday": [
+                    [
+                        8.0,
+                        11.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        11.5
+                    ]
+                ]
+            },
+            "subjects": [
+                "FRE",
+                "MUS",
+                "Writing",
+                "ANT"
             ]
         },
         "Vanessa": {
