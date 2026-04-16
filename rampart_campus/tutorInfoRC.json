@@ -155,20 +155,20 @@
             "time": {
                 "Monday": [
                     [
-                        9.0,
-                        16.0
+                        15.0,
+                        18.0
                     ]
                 ],
                 "Wednesday": [
                     [
                         9.0,
-                        16.0
+                        16.5
                     ]
                 ],
                 "Friday": [
                     [
-                        8.5,
-                        14.5
+                        9.0,
+                        14.0
                     ]
                 ]
             },
@@ -480,27 +480,6 @@
             "subjects": [
                 "Writing",
                 "OWL"
-            ]
-        },
-        "Tom M": {
-            "name": "Tom M",
-            "time": {
-                "Tuesday": [
-                    [
-                        8.0,
-                        10.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        8.0,
-                        10.0
-                    ]
-                ]
-            },
-            "subjects": [
-                "Math",
-                "Physics"
             ]
         },
         "Tyler": {

@@ -22,6 +22,26 @@
                 "Math"
             ]
         },
+        "Barbara": {
+            "name": "Barbara",
+            "time": {
+                "Monday": [
+                    [
+                        14.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        14.0,
+                        16.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "ESL"
+            ]
+        },
         "Ben": {
             "name": "Ben",
             "time": {
@@ -206,6 +226,34 @@
                 "Writing",
                 "History",
                 "OWL"
+            ]
+        },
+        "Jasmin": {
+            "name": "Jasmin",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Biology",
+                "Writing",
+                "Math"
             ]
         },
         "Kiela": {
@@ -488,41 +536,8 @@
                 "Math"
             ]
         },
-        "Tom M": {
-            "name": "Tom M",
-            "time": {
-                "Tuesday": [
-                    [
-                        13.5,
-                        16.5
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        13.5,
-                        16.5
-                    ]
-                ],
-                "Friday": [
-                    [
-                        12.5,
-                        17.0
-                    ]
-                ],
-                "Saturday": [
-                    [
-                        9.0,
-                        14.5
-                    ]
-                ]
-            },
-            "subjects": [
-                "Math",
-                "Physics"
-            ]
-        },
-        "Tom W": {
-            "name": "Tom W",
+        "Tom": {
+            "name": "Tom",
             "time": {
                 "Tuesday": [
                     [
@@ -547,6 +562,12 @@
         "Vanessa": {
             "name": "Vanessa",
             "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        12.0
+                    ]
+                ],
                 "Tuesday": [
                     [
                         8.0,
@@ -607,35 +628,6 @@
                         8.0,
                         11.0
                     ]
-                ]
-            }
-        },
-        "Gray": {
-            "name": "Gray",
-            "time": {
-                "Monday": [
-                    [
-                        15.0,
-                        18.0
-                    ]
-                ],
-                "Tuesday": [
-                    [
-                        15.0,
-                        18.0
-                    ]
-                ],
-                "Wednesday": [
-                    [
-                        15.0,
-                        18.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        15.0,
-                        18.0
-                    ]
                 ],
                 "Friday": [
                     [
@@ -644,6 +636,10 @@
                     ]
                 ]
             }
+        },
+        "Gray": {
+            "name": "Gray",
+            "time": {}
         },
         "Jake": {
             "name": "Jake",
@@ -655,12 +651,12 @@
                     ],
                     [
                         13.5,
-                        15.0
+                        17.0
                     ]
                 ],
                 "Tuesday": [
                     [
-                        12.0,
+                        11.0,
                         15.0
                     ]
                 ],
@@ -671,13 +667,13 @@
                     ],
                     [
                         13.5,
-                        15.0
+                        17.0
                     ]
                 ],
-                "Saturday": [
+                "Thursday": [
                     [
-                        9.0,
-                        15.0
+                        11.0,
+                        12.0
                     ]
                 ]
             }
