@@ -1,33 +1,20 @@
 {
     "location": "Rampart",
     "tutors": {
-        "Kim": {
-            "name": "Kim",
+        "Roberta": {
+            "name": "Roberta",
             "time": {
-                "Monday": [
+                "Friday": [
                     [
                         8.0,
-                        9.0
-                    ],
-                    [
-                        11.0,
-                        14.0
-                    ]
-                ],
-                "Wednesday": [
-                    [
-                        8.0,
-                        9.0
-                    ],
-                    [
-                        11.0,
-                        14.0
+                        16.0
                     ]
                 ]
             },
             "subjects": [
                 "Writing",
-                "History"
+                "History",
+                "Humanities"
             ]
         },
         "Shandi": {
@@ -35,32 +22,25 @@
             "time": {
                 "Monday": [
                     [
-                        13.0,
-                        16.0
-                    ]
-                ],
-                "Tuesday": [
-                    [
-                        9.0,
-                        16.0
+                        10.0,
+                        16.5
                     ]
                 ],
                 "Wednesday": [
                     [
-                        13.0,
-                        16.0
+                        10.0,
+                        16.5
                     ]
                 ],
                 "Friday": [
                     [
-                        9.0,
-                        15.0
+                        10.0,
+                        16.5
                     ]
                 ]
             },
             "subjects": [
                 "Writing",
-                "OWL",
                 "LIT",
                 "PSY"
             ]
@@ -68,16 +48,16 @@
         "Brandi": {
             "name": "Brandi",
             "time": {
-                "Tuesday": [
+                "Monday": [
                     [
-                        8.5,
-                        15.0
+                        11.5,
+                        17.0
                     ]
                 ],
-                "Thursday": [
+                "Wednesday": [
                     [
-                        10.5,
-                        15.5
+                        11.5,
+                        17.0
                     ]
                 ]
             },
@@ -87,29 +67,40 @@
         },
         "Loe": {
             "name": "Loe",
-            "time": {
-                "Tuesday": [
-                    [
-                        13.0,
-                        16.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        9.0,
-                        16.0
-                    ]
-                ]
-            },
+            "time": {},
             "subjects": [
                 "Writing",
-                "OWL",
                 "JPN"
             ]
         },
         "Tyler": {
             "name": "Tyler",
-            "time": {},
+            "time": {
+                "Monday": [
+                    [
+                        12.5,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        14.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.5,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        14.0
+                    ]
+                ]
+            },
             "subjects": [
                 "Math",
                 "Physics",
@@ -119,15 +110,27 @@
         "Ahmed": {
             "name": "Ahmed",
             "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        14.0
+                    ]
+                ],
                 "Tuesday": [
                     [
-                        10.0,
+                        8.0,
                         14.0
                     ]
                 ],
                 "Wednesday": [
                     [
-                        10.0,
+                        8.0,
+                        14.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
                         14.0
                     ]
                 ]
@@ -135,6 +138,9 @@
             "subjects": [
                 "Writing",
                 "Biology",
+                "ARA",
+                "PSY",
+                "LIT",
                 "PHI"
             ]
         },
@@ -143,26 +149,30 @@
             "time": {
                 "Monday": [
                     [
-                        8.0,
-                        13.0
+                        12.0,
+                        18.0
                     ]
                 ],
                 "Tuesday": [
                     [
-                        8.0,
-                        13.0
+                        15.5,
+                        18.0
                     ]
                 ],
                 "Wednesday": [
                     [
-                        8.0,
-                        13.0
+                        11.0,
+                        18.0
                     ]
                 ],
                 "Thursday": [
                     [
-                        8.0,
-                        13.0
+                        10.0,
+                        12.0
+                    ],
+                    [
+                        15.5,
+                        18.0
                     ]
                 ]
             },
@@ -175,28 +185,21 @@
         "Maddie": {
             "name": "Maddie",
             "time": {
-                "Monday": [
+                "Tuesday": [
                     [
-                        9.0,
-                        16.0
+                        11.0,
+                        18.0
                     ]
                 ],
-                "Wednesday": [
+                "Thursday": [
                     [
-                        9.0,
-                        13.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        9.0,
-                        15.0
+                        11.0,
+                        18.0
                     ]
                 ]
             },
             "subjects": [
-                "Writing",
-                "OWL"
+                "Writing"
             ]
         },
         "River": {
@@ -204,26 +207,26 @@
             "time": {
                 "Tuesday": [
                     [
-                        10.0,
-                        16.0
+                        9.0,
+                        14.5
                     ]
                 ],
                 "Wednesday": [
                     [
-                        10.0,
-                        16.0
+                        9.0,
+                        14.5
                     ]
                 ],
                 "Thursday": [
                     [
-                        8.0,
-                        16.0
+                        9.0,
+                        14.5
                     ]
                 ],
                 "Friday": [
                     [
-                        8.0,
-                        15.0
+                        8.5,
+                        15.5
                     ]
                 ]
             },
@@ -236,26 +239,32 @@
             "time": {
                 "Monday": [
                     [
-                        9.0,
-                        14.0
+                        15.5,
+                        18.0
                     ]
                 ],
                 "Tuesday": [
                     [
                         10.0,
-                        15.0
+                        12.0
                     ]
                 ],
                 "Wednesday": [
                     [
-                        10.0,
-                        15.0
+                        8.5,
+                        15.5
                     ]
                 ],
                 "Thursday": [
                     [
                         10.0,
-                        15.0
+                        12.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        15.5
                     ]
                 ]
             },
@@ -269,20 +278,26 @@
             "time": {
                 "Monday": [
                     [
-                        9.0,
-                        16.0
+                        8.0,
+                        12.5
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        14.5,
+                        18.0
                     ]
                 ],
                 "Thursday": [
                     [
-                        9.0,
-                        16.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        9.0,
-                        15.0
+                        12.0,
+                        18.0
                     ]
                 ]
             },
@@ -291,43 +306,25 @@
                 "Math"
             ]
         },
-        "Lyndsay": {
-            "name": "Lyndsay",
-            "time": {
-                "Thursday": [
-                    [
-                        8.0,
-                        15.0
-                    ]
-                ]
-            },
-            "subjects": [
-                "Writing",
-                "Public Speaking",
-                "GEO",
-                "GEY",
-                "Env. Science"
-            ]
-        },
         "John": {
             "name": "John",
             "time": {
                 "Monday": [
                     [
                         9.0,
-                        16.0
-                    ]
-                ],
-                "Tuesday": [
-                    [
-                        9.0,
-                        16.0
+                        17.0
                     ]
                 ],
                 "Wednesday": [
                     [
                         9.0,
-                        16.0
+                        13.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        17.0
                     ]
                 ]
             },
@@ -348,30 +345,33 @@
                 ],
                 "Tuesday": [
                     [
-                        8.0,
-                        16.0
+                        14.0,
+                        18.0
                     ]
                 ],
                 "Wednesday": [
                     [
                         8.0,
-                        16.0
+                        14.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        11.0,
+                        18.0
                     ]
                 ],
                 "Friday": [
                     [
                         8.0,
                         10.0
-                    ],
-                    [
-                        12.0,
-                        14.0
                     ]
                 ]
             },
             "subjects": [
                 "Math",
-                "Writing"
+                "Writing",
+                "EGG"
             ]
         }
     },
@@ -381,20 +381,57 @@
             "time": {
                 "Monday": [
                     [
-                        9.0,
-                        16.0
+                        15.0,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.5,
+                        11.5
+                    ],
+                    [
+                        14.0,
+                        18.0
                     ]
                 ],
                 "Wednesday": [
                     [
-                        9.0,
-                        16.0
+                        15.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.5,
+                        11.5
+                    ],
+                    [
+                        14.0,
+                        18.0
+                    ]
+                ]
+            }
+        },
+        "Heaven": {
+            "name": "Heaven",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        15.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        15.0
                     ]
                 ],
                 "Friday": [
                     [
-                        9.0,
-                        15.0
+                        8.0,
+                        14.0
                     ]
                 ]
             }
