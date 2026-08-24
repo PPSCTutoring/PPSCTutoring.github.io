@@ -322,6 +322,173 @@
                 "Writing",
                 "JPN"
             ]
+        },
+        "Erik": {
+            "name": "Erik",
+            "time": {
+                "Monday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        12.0,
+                        17.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        13.0,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Writing",
+                "PHI",
+                "PAR",
+                "HUM",
+                "JPN"
+            ]
+        },
+        "Oscar": {
+            "name": "Oscar",
+            "time": {
+                "Monday": [
+                    [
+                        14.5,
+                        18.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        12.5,
+                        18.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        14.5,
+                        17.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math",
+                "Computer Science"
+            ]
+        },
+        "Dee": {
+            "name": "Dee",
+            "time": {
+                "Tuesday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        12.0,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Biology",
+                "ZOO",
+                "VET",
+                "Env. Science",
+                "Public Speaking"
+            ]
+        },
+        "Chris": {
+            "name": "Chris",
+            "time": {
+                "Monday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        9.0,
+                        16.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math"
+            ]
+        },
+        "Lyndsay": {
+            "name": "Lyndsay",
+            "time": {
+                "Tuesday": [
+                    [
+                        8.5,
+                        14.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        9.0,
+                        13.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        15.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        9.0,
+                        15.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Writing",
+                "Public Speaking",
+                "GEO",
+                "GEY",
+                "Env. Science"
+            ]
         }
     },
     "front_desk": {
