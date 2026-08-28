@@ -4,10 +4,22 @@
         "Roberta": {
             "name": "Roberta",
             "time": {
+                "Tuesday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ],
                 "Friday": [
                     [
                         8.0,
-                        16.0
+                        13.0
                     ]
                 ]
             },
@@ -15,6 +27,23 @@
                 "Writing",
                 "History",
                 "Humanities"
+            ]
+        },
+        "Chancey": {
+            "name": "Chancey",
+            "time": {
+                "Tuesday": [
+                    [
+                        15.5,
+                        18.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Writing",
+                "Math",
+                "Public Speaking",
+                "CIS"
             ]
         },
         "Shandi": {
@@ -113,25 +142,13 @@
                 "Monday": [
                     [
                         8.0,
-                        14.0
-                    ]
-                ],
-                "Tuesday": [
-                    [
-                        8.0,
-                        14.0
+                        15.0
                     ]
                 ],
                 "Wednesday": [
                     [
                         8.0,
-                        14.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        8.0,
-                        14.0
+                        15.0
                     ]
                 ]
             },
