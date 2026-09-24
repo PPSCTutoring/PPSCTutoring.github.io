@@ -104,7 +104,10 @@ function changeHiddenColor(tutorObject){
 
 async function addToPublicList(tutorObject){
     try{
-        let firstName = tutorObject.name.split(" ")[0]
+        let firstName = tutorObject.name.split(" ")[0];
+        if(firstName == "Georgia"){
+            firstName = "Georgia Mae";
+        }
         let subs = prettify(tutorObject.subjects); 
         let ulAddName = document.createElement('li');
         let tutImg = document.createElement('img');

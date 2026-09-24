@@ -310,6 +310,33 @@
                 "JPN"
             ]
         },
+        "Georgia": {
+            "name": "Georgia",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        11.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        10.0,
+                        12.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        10.0,
+                        12.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "ESL",
+                "Writing"
+            ]
+        },
         "Erik": {
             "name": "Erik",
             "time": {
@@ -547,6 +574,35 @@
                     [
                         8.0,
                         16.0
+                    ]
+                ]
+            }
+        },
+        "Mauro": {
+            "name": "Mauro",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        12.5
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        12.0,
+                        17.5
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        12.5
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        12.0,
+                        17.5
                     ]
                 ]
             }
