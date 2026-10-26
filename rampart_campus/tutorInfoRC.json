@@ -3,26 +3,7 @@
     "tutors": {
         "Roberta": {
             "name": "Roberta",
-            "time": {
-                "Tuesday": [
-                    [
-                        8.0,
-                        13.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        8.0,
-                        13.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        8.0,
-                        13.0
-                    ]
-                ]
-            },
+            "time": {},
             "subjects": [
                 "Writing",
                 "History",
@@ -53,6 +34,12 @@
                     [
                         10.0,
                         16.5
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        8.0,
+                        15.5
                     ]
                 ],
                 "Wednesday": [
@@ -105,28 +92,16 @@
         "Tyler": {
             "name": "Tyler",
             "time": {
-                "Monday": [
-                    [
-                        12.5,
-                        18.0
-                    ]
-                ],
                 "Tuesday": [
                     [
                         8.0,
-                        14.0
-                    ]
-                ],
-                "Wednesday": [
-                    [
-                        12.5,
-                        18.0
+                        16.0
                     ]
                 ],
                 "Thursday": [
                     [
                         8.0,
-                        14.0
+                        16.0
                     ]
                 ]
             },
@@ -243,13 +218,13 @@
                 "Thursday": [
                     [
                         9.0,
-                        14.5
+                        13.5
                     ]
                 ],
                 "Friday": [
                     [
-                        8.5,
-                        15.5
+                        9.0,
+                        17.0
                     ]
                 ]
             },
@@ -356,46 +331,6 @@
                 "Computer Science",
                 "Physics"
             ]
-        },
-        "Chloe": {
-            "name": "Chloe",
-            "time": {
-                "Monday": [
-                    [
-                        8.0,
-                        16.0
-                    ]
-                ],
-                "Tuesday": [
-                    [
-                        14.0,
-                        18.0
-                    ]
-                ],
-                "Wednesday": [
-                    [
-                        8.0,
-                        14.0
-                    ]
-                ],
-                "Thursday": [
-                    [
-                        11.0,
-                        18.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        8.0,
-                        10.0
-                    ]
-                ]
-            },
-            "subjects": [
-                "Math",
-                "Writing",
-                "EGG"
-            ]
         }
     },
     "front_desk": {
@@ -432,29 +367,6 @@
                     [
                         14.0,
                         18.0
-                    ]
-                ]
-            }
-        },
-        "Heaven": {
-            "name": "Heaven",
-            "time": {
-                "Monday": [
-                    [
-                        8.0,
-                        15.0
-                    ]
-                ],
-                "Wednesday": [
-                    [
-                        8.0,
-                        15.0
-                    ]
-                ],
-                "Friday": [
-                    [
-                        8.0,
-                        14.0
                     ]
                 ]
             }
