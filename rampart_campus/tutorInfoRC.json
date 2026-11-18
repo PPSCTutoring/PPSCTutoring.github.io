@@ -3,7 +3,26 @@
     "tutors": {
         "Roberta": {
             "name": "Roberta",
-            "time": {},
+            "time": {
+                "Tuesday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        8.0,
+                        13.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        10.0,
+                        16.0
+                    ]
+                ]
+            },
             "subjects": [
                 "Writing",
                 "History",
