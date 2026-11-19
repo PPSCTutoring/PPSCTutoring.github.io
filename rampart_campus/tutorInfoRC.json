@@ -350,6 +350,46 @@
                 "Computer Science",
                 "Physics"
             ]
+        },
+        "Chloe": {
+            "name": "Chloe",
+            "time": {
+                "Monday": [
+                    [
+                        8.0,
+                        16.0
+                    ]
+                ],
+                "Tuesday": [
+                    [
+                        14.0,
+                        18.0
+                    ]
+                ],
+                "Wednesday": [
+                    [
+                        8.0,
+                        14.0
+                    ]
+                ],
+                "Thursday": [
+                    [
+                        11.0,
+                        18.0
+                    ]
+                ],
+                "Friday": [
+                    [
+                        8.0,
+                        10.0
+                    ]
+                ]
+            },
+            "subjects": [
+                "Math",
+                "Writing",
+                "EGG"
+            ]
         }
     },
     "front_desk": {
